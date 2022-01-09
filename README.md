@@ -4,13 +4,13 @@ Currently I am a postdoctoral fellow in the [Department of Physics](https://www.
 study biological systems
 
 ### Contact
- Wean Hall Room: 6303\\
- Department of Physics\\
- Carnegie Mellon Univerity\\
- Pittsburgh, PA 15213\\
- United States.
- Email: debsankb@andrew.cmu.edu
- Ph: +1 412 915 3634
+ Wean Hall Room: 6303\
+ Department of Physics\
+ Carnegie Mellon Univerity\
+ Pittsburgh, PA 15213\
+ United States.\
+ Email: debsankb@andrew.cmu.edu\
+ Ph: +1 412 915 3634\
  Twitter: debsankar@ponchovut
 
 ## My Research
