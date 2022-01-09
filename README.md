@@ -1,8 +1,17 @@
 ## Deb Sankar Banerjee
 
-You can use the [editor on GitHub](https://github.com/DebsankarBanerjee/DebsankarBanerjee.github.io/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
+Currently I am a postdoctoral fellow in the [Department of Physics](https://www.cmu.edu/physics/) in Carnegie Mellon University working with Prof. [Shiladitya Banerjee](https://shiladitya-banerjee.com/). My primary research interests lie in understanding the physical principles which drive the complex and rich dynamics seen in living active matter systems. My current research activities are mainly focused on studying the formation and size regulation of intracellular structures (e.g., filaments, networks, organelles, condensates etc) and studying the collective dynamics and self-organization of active elements (e.g., growing filaments, contractile actomyosin network, cell junction etc) seen across the scales from sub-cellular cytoskeleton to supra-cellular structures and tissues. I employ various analytical and computational methods ranging from coarse grained active hydrodynamic description to stochastic reaction network and microscopic molecular dynamics simulations, to model and
+study biological systems
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### Contact
+ Wean Hall Room: 6303\\
+ Department of Physics\\
+ Carnegie Mellon Univerity\\
+ Pittsburgh, PA 15213\\
+ United States.
+ Email: debsankb@andrew.cmu.edu
+ Ph: +1 412 915 3634
+ Twitter: debsankar@ponchovut
 
 ## My Research
 
