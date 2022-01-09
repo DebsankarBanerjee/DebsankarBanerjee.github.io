@@ -8,7 +8,7 @@ study biological systems
  Department of Physics\
  Carnegie Mellon Univerity\
  Pittsburgh, PA 15213\
- United States.\
+ United States\
  Email: debsankb@andrew.cmu.edu\
  Ph: +1 412 915 3634\
  Twitter: debsankar@ponchovut
