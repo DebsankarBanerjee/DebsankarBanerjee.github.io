@@ -16,7 +16,9 @@ I apply concepts from **cell biology**, **mechanobiology** and **soft-condensed 
 ### Self-organization of intracellular structures:
 I combine ideas from statistical mechanics, cell biology and systems biology to study the design principles employed in dynamic (stochastic) self-organization and size-regulation of various organelles and intracellular structures. I have used chemical master equation and stochastic reaction network and hydrodynamics to describe the problems of self-organization.
 
-![Size-regulated symmetry breaking in single cells.](https://www.mdpi.com/cells/cells-09-01646/article_deploy/html/images/cells-09-01646-g003.png)
+![Size-regulated symmetry breaking in single cells.](https://www.mdpi.com/2073-4409/9/7/1646/htm)
+
+<img src="https://www.mdpi.com/cells/cells-09-01646/article_deploy/html/images/cells-09-01646-g003.png" >  
 *Size-regulated symmetry breaking in single cells. (a) A phase-diagram for the PAR system, considering polarisation state as a function of the circumferential length of the embryo (“Length”), and the ratio of aPAR to pPAR pool size (“AP ratio”). The diagram demonstrates a bipolar state (grey region) becomes unstable below a critical circumferential embryo length (pink and blue regions). Schematics for each of the three states are overlayed, with aPARs denoted in pink and pPARs denoted in blue. This bifurcation point quantitatively matches the critical size for which dividing P-cells in the early C. elegans embryo transition from asymmetric to symmetric division. Figure adapted from the work in. Adjacent is the feedback motif that drives pattern formation. (b) In the budding yeast (S. cerevisiae), cell cycle commitment to Start is linked to the localisation of Cdc42 effectors at the presumptive bud site. Cdc42 polarity establishment is related to the duration of the G1 phase of the cell cycle, which ends at a critical cell size. Models have shown that a growth process with positive feedback leads to Cdc42 polarisation at a single site.*
 
 
