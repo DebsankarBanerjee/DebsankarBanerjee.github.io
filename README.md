@@ -9,12 +9,15 @@ study biological systems
 I apply concepts from **cell biology**, **mechanobiology** and **soft-condensed matter physics** to understand how local actomyosin forces are organized and orchestrated from sub-cellular to supra-cellular scales to create complex (tissue) shape and dynamics. The broader goal of my research in this direction is to understand the dynamics of the elementary organizations of the actomyosin mechinary (e.g., subcellualr cortex, cellular junction etc) and to uncover the cross-talk between such organizations which drives the **tissue remodelling**.
 
 ![alt text](https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41467-017-01130-1/MediaObjects/41467_2017_1130_Fig6_HTML.jpg?as=webp)
-*Possible mechanisms for the movement of actomyosin-dense structures in an active affine elastomer: a moving deformation of the actomyosin mesh without turnover, implying a traveling front, and b moving deformation of the actomyosin mesh with differential myosin binding unbind rates at the leading and trailing edges of the front*
-
-[![Everything Is AWESOME](https://www.youtube.com/watch?v=3S5A1Zv2W1c/0.jpg)](https://www.youtube.com/watch?v=3S5A1Zv2W1c "Everything Is AWESOME")
+*Possible mechanisms for the movement of actomyosin-dense structures in an active affine elastomer: a moving deformation of the actomyosin mesh without turnover, implying a traveling front, and b moving deformation of the actomyosin mesh with differential myosin binding unbind rates at the leading and trailing edges of the front.*
 
 <iframe width="420" height="315" src="https://www.youtube.com/embed/3S5A1Zv2W1c" frameborder="0" allowfullscreen></iframe>
 
+### Self-organization of intracellular structures:
+I combine ideas from statistical mechanics, cell biology and systems biology to study the design principles employed in dynamic (stochastic) self-organization and size-regulation of various organelles and intracellular structures. I have used chemical master equation and stochastic reaction network and hydrodynamics to describe the problems of self-organization.
+
+![Size-regulated symmetry breaking in single cells.](https://www.mdpi.com/cells/cells-09-01646/article_deploy/html/images/cells-09-01646-g003.png)
+*Size-regulated symmetry breaking in single cells. (a) A phase-diagram for the PAR system, considering polarisation state as a function of the circumferential length of the embryo (“Length”), and the ratio of aPAR to pPAR pool size (“AP ratio”). The diagram demonstrates a bipolar state (grey region) becomes unstable below a critical circumferential embryo length (pink and blue regions). Schematics for each of the three states are overlayed, with aPARs denoted in pink and pPARs denoted in blue. This bifurcation point quantitatively matches the critical size for which dividing P-cells in the early C. elegans embryo transition from asymmetric to symmetric division. Figure adapted from the work in. Adjacent is the feedback motif that drives pattern formation. (b) In the budding yeast (S. cerevisiae), cell cycle commitment to Start is linked to the localisation of Cdc42 effectors at the presumptive bud site. Cdc42 polarity establishment is related to the duration of the G1 phase of the cell cycle, which ends at a critical cell size. Models have shown that a growth process with positive feedback leads to Cdc42 polarisation at a single site.*
 
 
 ## My Publications
