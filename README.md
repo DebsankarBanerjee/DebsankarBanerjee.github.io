@@ -6,13 +6,15 @@ study biological systems
 ## My Research
 
 ### Cytoskeletal dynamics across scales:
-I apply concepts from cell biology, mechanobiology and soft-condensed matter physics to un-
-derstand how local actomyosin forces are organized and orchestrated from sub-cellular to supra-cellular
-scales to create complex (tissue) shape and dynamics.
+I apply concepts from **cell biology**, **mechanobiology** and **soft-condensed matter physics** to understand how local actomyosin forces are organized and orchestrated from sub-cellular to supra-cellular scales to create complex (tissue) shape and dynamics. The broader goal of my research in this direction is to understand the dynamics of the elementary organizations of the actomyosin mechinary (e.g., subcellualr cortex, cellular junction etc) and to uncover the cross-talk between such organizations which drives the **tissue remodelling**.
+
 ![alt text](https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41467-017-01130-1/MediaObjects/41467_2017_1130_Fig6_HTML.jpg?as=webp)
 *Possible mechanisms for the movement of actomyosin-dense structures in an active affine elastomer: a moving deformation of the actomyosin mesh without turnover, implying a traveling front, and b moving deformation of the actomyosin mesh with differential myosin binding unbind rates at the leading and trailing edges of the front*
 
 [![Everything Is AWESOME](https://www.youtube.com/watch?v=3S5A1Zv2W1c/0.jpg)](https://www.youtube.com/watch?v=3S5A1Zv2W1c "Everything Is AWESOME")
+
+<iframe width="420" height="315" src="https://www.youtube.com/embed/3S5A1Zv2W1c" frameborder="0" allowfullscreen></iframe>
+
 
 
 ## My Publications
