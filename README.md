@@ -16,7 +16,7 @@ I apply concepts from **cell biology**, **mechanobiology** and **soft-condensed 
 ### Self-organization of intracellular structures:
 I combine ideas from statistical mechanics, cell biology and systems biology to study the design principles employed in dynamic (stochastic) self-organization and size-regulation of various organelles and intracellular structures. I have used chemical master equation and stochastic reaction network and hydrodynamics to describe the problems of self-organization.
 
-![Size-regulated symmetry breaking in single cells.](https://www.mdpi.com/2073-4409/9/7/1646/htm)
+![alt text](https://www.mdpi.com/2073-4409/9/7/1646/htm)
 
 <img src="https://www.mdpi.com/cells/cells-09-01646/article_deploy/html/images/cells-09-01646-g003.png" >  
 
