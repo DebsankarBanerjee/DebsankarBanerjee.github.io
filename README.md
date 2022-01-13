@@ -27,6 +27,8 @@ I combine ideas from statistical mechanics, cell biology and systems biology to 
 
 My publications
 
+[See my Google Scholar page](https://scholar.google.com/citations?user=jW_aHa8AAAAJ&hl=en)
+
 ### Contact
  Wean Hall Room: 6303\
  Department of Physics\
