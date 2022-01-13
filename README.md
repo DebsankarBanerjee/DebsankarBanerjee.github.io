@@ -9,7 +9,7 @@ study biological systems
 I apply concepts from **cell biology**, **mechanobiology** and **soft-condensed matter physics** to understand how local actomyosin forces are organized and orchestrated from sub-cellular to supra-cellular scales to create complex (tissue) shape and dynamics. The broader goal of my research in this direction is to understand the dynamics of the elementary organizations of the actomyosin mechinary (e.g., subcellualr cortex, cellular junction etc) and to uncover the cross-talk between such organizations which drives the **tissue remodelling**.
 
 ![alt text](https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41467-017-01130-1/MediaObjects/41467_2017_1130_Fig6_HTML.jpg?as=webp)
-*Possible mechanisms for the movement of actomyosin-dense structures in an active affine elastomer.[Check out the work here](https://www.nature.com/articles/s41467-017-01130-1)*
+*Possible mechanisms for the movement of actomyosin-dense structures in an active affine elastomer. [Check out the work here](https://www.nature.com/articles/s41467-017-01130-1)*
 
 <iframe width="420" height="315" src="https://www.youtube.com/embed/3S5A1Zv2W1c" frameborder="0" allowfullscreen></iframe>
 
@@ -19,6 +19,7 @@ I combine ideas from statistical mechanics, cell biology and systems biology to 
 ![Size-regulated symmetry breaking in single cells.](https://www.mdpi.com/2073-4409/9/7/1646/htm)
 
 <img src="https://www.mdpi.com/cells/cells-09-01646/article_deploy/html/images/cells-09-01646-g003.png" >  
+
 *Size-regulated symmetry breaking in single cells. [Check out the work here](https://www.mdpi.com/2073-4409/9/7/1646)*
 
 
