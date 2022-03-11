@@ -14,7 +14,7 @@ I apply concepts from **cell biology**, **mechanobiology** and **soft-condensed 
 <iframe width="420" height="315" src="https://www.youtube.com/embed/3S5A1Zv2W1c" frameborder="0" allowfullscreen></iframe>
 
 ### Self-organization of intracellular structures:
-I combine ideas from statistical mechanics, cell biology and systems biology to study the design principles employed in dynamic (stochastic) self-organization and size-regulation of various organelles and intracellular structures. I have used chemical master equation and stochastic reaction network and hydrodynamics to describe the problems of self-organization.
+I combine ideas from statistical mechanics, cell biology and systems biology to study the design principles employed in dynamic self-organization and size-regulation of various organelles and intracellular structures. I have used chemical master equation and stochastic reaction network and hydrodynamics to describe the problems of self-organization.
 
 <img src="https://www.mdpi.com/cells/cells-09-01646/article_deploy/html/images/cells-09-01646-g003.png" >  
 
@@ -39,7 +39,7 @@ See my [Google Scholar page](https://scholar.google.com/citations?user=jW_aHa8AA
 
 
 
-Make this page using info from this page [quickstart](https://docs.github.com/en/pages/quickstart)
+<!-- Make this page using info from this page [quickstart](https://docs.github.com/en/pages/quickstart)
 
 ### Markdown
 
@@ -71,4 +71,4 @@ Your Pages site will use the layout and styles from the Jekyll theme you have se
 
 ### Support or Contact
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out. -->
