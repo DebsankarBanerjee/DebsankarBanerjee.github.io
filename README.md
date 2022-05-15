@@ -20,7 +20,7 @@ I combine ideas from statistical mechanics, cell biology and systems biology to 
 
 *Size-regulated symmetry breaking in single cells. [Check out the work here](https://www.mdpi.com/2073-4409/9/7/1646)*
 
-<iframe width="420" height="315" src="https://youtu.be/oCbDRSGyCu4" frameborder="0" allowfullscreen></iframe>
+<iframe width="420" height="315" src="https://youtube.com/embed/oCbDRSGyCu4" frameborder="0" allowfullscreen></iframe>
 
 ## My Publications
 
