@@ -3,9 +3,10 @@
 <!--First section-->
   <div style="background-image: url('background.jpg'); 
   background-size: cover; height:320px; padding-top:80px;">
-  <img src="deb_400x400.jpg" style="height:150px; border-radius: 50%; border: 10px solid #FEDE00;" alt="This is shark.">
+  <img src="deb_400x400.jpg" style="height:150px; border-radius: 50%; border: 10px solid #FEDE00;" alt="This is me.">
   </div>
 </body>
+<br/>
 Currently I am a postdoctoral fellow in the [Department of Physics](https://www.cmu.edu/physics/) in Carnegie Mellon University working with Prof. [Shiladitya Banerjee](https://shiladitya-banerjee.com/). My primary research interests lie in understanding the physical principles which drive the complex and rich dynamics seen in **living active matter systems**. My current research activities are mainly focused on studying the formation and size regulation of intracellular structures (e.g., filaments, networks, organelles, condensates etc) and studying the collective dynamics and self-organization of active elements (e.g., growing filaments, contractile actomyosin network, cell junction etc) seen across the scales from sub-cellular cytoskeleton to supra-cellular structures and tissues. I employ various analytical and computational methods ranging from coarse grained active hydrodynamic description to stochastic reaction network and microscopic molecular dynamics simulations, to model and
 study biological systems
 
