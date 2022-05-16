@@ -1,5 +1,8 @@
 ## Deb Sankar Banerjee
-
+ <img src="deb_400x400.jpg" alt="Avatar"> 
+ img {
+  border-radius: 50%;
+}
 Currently I am a postdoctoral fellow in the [Department of Physics](https://www.cmu.edu/physics/) in Carnegie Mellon University working with Prof. [Shiladitya Banerjee](https://shiladitya-banerjee.com/). My primary research interests lie in understanding the physical principles which drive the complex and rich dynamics seen in **living active matter systems**. My current research activities are mainly focused on studying the formation and size regulation of intracellular structures (e.g., filaments, networks, organelles, condensates etc) and studying the collective dynamics and self-organization of active elements (e.g., growing filaments, contractile actomyosin network, cell junction etc) seen across the scales from sub-cellular cytoskeleton to supra-cellular structures and tissues. I employ various analytical and computational methods ranging from coarse grained active hydrodynamic description to stochastic reaction network and microscopic molecular dynamics simulations, to model and
 study biological systems
 
