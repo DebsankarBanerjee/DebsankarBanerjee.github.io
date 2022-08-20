@@ -41,7 +41,7 @@ See my publications in the [Google Scholar page](https://scholar.google.com/cita
  United States\
  Email: debsankb@andrew.cmu.edu\
  Ph: +1 412 915 3634\
- [Find me on Twitter](https://twitter.com/DebSBanerjee1)
+ [Find me on Twitter](https://twitter.com/DebSBanerjee1)\
  [ORCiD](https://orcid.org/0000-0003-4452-7982)
 
 
