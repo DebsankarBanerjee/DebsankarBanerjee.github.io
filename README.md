@@ -34,12 +34,10 @@ I combine ideas from statistical mechanics, cell biology and systems biology to 
  <ul>
   <li>Actomyosin pulsation and flows in an active elastomer with turnover and network remodelling,
       <a href="https://www.nature.com/articles/s41467-017-01130-1"><b>Nat. Commun. 8</b>, 1121 (2017)</a> <br>
-      Deb S Banerjee, Akankshi Munjal, Thomas Lecuit and Madan Rao.
-  </li>
+      Deb S Banerjee, Akankshi Munjal, Thomas Lecuit and Madan Rao.</li>
   <li>Size regulation of multiple organelles competing for a limiting subunit pool,
     <a href="https://doi.org/10.1371/journal.pcbi.1010253)"><b>PLoS Comput Biol 18</b>, (6) (2022)</a> <br>
-    Deb S Banerjee, Shiladitya Banerjee.
-  </li>
+    Deb S Banerjee, Shiladitya Banerjee.</li>
 </ul> 
 See all my publications in the [Google Scholar page](https://scholar.google.com/citations?user=jW_aHa8AAAAJ&hl=en)
 
