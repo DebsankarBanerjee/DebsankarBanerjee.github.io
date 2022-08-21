@@ -39,6 +39,7 @@ I combine ideas from statistical mechanics, cell biology and systems biology to 
     <a href="https://doi.org/10.1371/journal.pcbi.1010253)"><b>PLoS Comput Biol 18</b>, (6) (2022)</a> <br>
     Deb S Banerjee, Shiladitya Banerjee.</li>
 </ul> 
+
 See all my publications in the [Google Scholar page](https://scholar.google.com/citations?user=jW_aHa8AAAAJ&hl=en)
 
 ### Contact
