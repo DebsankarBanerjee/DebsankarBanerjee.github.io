@@ -30,8 +30,17 @@ I combine ideas from statistical mechanics, cell biology and systems biology to 
 <iframe width="420" height="315" src="https://youtube.com/embed/oCbDRSGyCu4" frameborder="0" allowfullscreen></iframe>
 
 ## My Publications
-
-See my publications in the [Google Scholar page](https://scholar.google.com/citations?user=jW_aHa8AAAAJ&hl=en)
+### Key Publications: 
+ <ul>
+  <li>Actomyosin pulsation and flows in an active elastomer with turnover and network remodelling,<br>
+      <b>Nat. Commun. 8</b>, 1121 (2017)<br>
+      Deb S Banerjee, Akankshi Munjal, Thomas Lecuit and Madan Rao.<br>
+       <a href="https://www.w3schools.com/](https://www.nature.com/articles/s41467-017-01130-1">Link</a> <br>
+  </li>
+  <li>Tea</li>
+  <li>Milk</li>
+</ul> 
+See all my publications in the [Google Scholar page](https://scholar.google.com/citations?user=jW_aHa8AAAAJ&hl=en)
 
 ### Contact
  Wean Hall Room: 6303\
