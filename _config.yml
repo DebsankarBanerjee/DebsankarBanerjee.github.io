@@ -2,3 +2,5 @@ theme: jekyll-theme-leap-day
 title: Deb Sankar's homepage
 description: My research on the physics of living systems
 classes: wide
+github:
+  is_project_page: false
