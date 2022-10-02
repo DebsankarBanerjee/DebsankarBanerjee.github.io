@@ -2,8 +2,8 @@
 <body>
 <!--First section-->
   <div style="background-image: url('background.jpg'); 
-  background-size: cover; height:320px; padding-top:80px;">
-  <img src="deb_400x400.jpg" style="height:150px; border-radius: 50%; border: 10px solid #FEDE00;" alt="This is me.">
+  background-size: cover; height:420px; padding-top:80px;">
+  <img src="deb_400x400.jpg" style="height:200px; border-radius: 50%; border: 10px solid #FEDE00;" alt="This is me.">
   </div>
 </body>
 <br/>
