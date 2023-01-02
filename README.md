@@ -49,7 +49,7 @@ See all my publications in the [Google Scholar page](https://scholar.google.com/
  Pittsburgh, PA 15213\
  United States\
  Email: debsankb@andrew.cmu.edu\
- Ph: +1 412 915 3634\
+ Email: debsankar1988@gmail.com\
  [Find me on Twitter](https://twitter.com/DebSBanerjee1)\
  [ORCiD](https://orcid.org/0000-0003-4452-7982)
 
