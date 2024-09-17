@@ -38,6 +38,12 @@ I combine ideas from statistical mechanics, cell biology and systems biology to 
   <li>Size regulation of multiple organelles competing for a limiting subunit pool,
     <a href="https://doi.org/10.1371/journal.pcbi.1010253)"><b>PLoS Comput Biol 18</b>, (6) (2022)</a> <br>
     Deb S Banerjee, Shiladitya Banerjee.</li>
+   <li>Catalytic growth in a shared enzyme pool ensures robust control of centrosome size,
+    <a href="https://elifesciences.org/reviewed-preprints/92203"><b>eLife 12</b>, (RP92203) (2023)</a> <br>
+    Deb S Banerjee, Shiladitya Banerjee.</li>
+   <li>Interplay of condensate material properties and chromatin heterogeneity governs nuclear condensate ripening,
+    <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11100695/"><b>In review</b>, (2023)</a> <br>
+    Deb S Banerjee, Tafadzwa Chigumira, Rachel M Lackner, Josiah C Kratz, David M Chenoweth, Shiladitya Banerjee, Huaiying Zhang.</li>
 </ul> 
 
 See all my publications in the [Google Scholar page](https://scholar.google.com/citations?user=jW_aHa8AAAAJ&hl=en)
