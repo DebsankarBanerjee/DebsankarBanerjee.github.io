@@ -7,13 +7,13 @@
   </div>
 </body>
 <br/>
-Currently I am a postdoctoral fellow in the [James Franck Institute](https://jamesfranckinstitute.uchicago.edu/) at The University of Chicago working with Prof. [Suri Vaikuntanathan](https://vaikuntanathan-group.uchicago.edu/). My primary research interests lie in understanding the physical principles that drive the complex and rich dynamics seen in **living matter systems**. My current research activities are mainly focused on understanding how physical learning leads to mechanochemical adaptation at a cellular or tissue level, studying the formation and size regulation of intracellular structures (e.g., filaments, networks, organelles, condensates etc), and studying the collective dynamics and self-organization of active elements (e.g., growing filaments, contractile actomyosin network, cell junction etc) seen across the scales from the sub-cellular cytoskeleton to supra-cellular structures and tissues. I employ various analytical and computational methods ranging from coarse grained active hydrodynamic description to stochastic reaction network and microscopic molecular dynamics simulations, to model and
+Currently, I am a postdoctoral fellow at the [James Franck Institute](https://jamesfranckinstitute.uchicago.edu/) at The University of Chicago working with Prof. [Suri Vaikuntanathan](https://vaikuntanathan-group.uchicago.edu/). My primary research interests lie in understanding the physical principles that drive the complex and rich dynamics seen in **living matter systems**. My current research activities are mainly focused on understanding how physical learning leads to mechanochemical adaptation at a cellular or tissue level, studying the formation and size regulation of intracellular structures (e.g., filaments, networks, organelles, condensates etc), and studying the collective dynamics and self-organization of active elements (e.g., growing filaments, contractile actomyosin network, cell junction etc) seen across the scales from the sub-cellular cytoskeleton to supra-cellular structures and tissues. I employ various analytical and computational methods ranging from coarse-grained active hydrodynamic description to stochastic reaction network and microscopic molecular dynamics simulations, to model and
 study biological systems.
 
 ## My Research
 
 ### Cytoskeletal dynamics across scales:
-I apply concepts from **cell biology**, **mechanobiology** and **soft-condensed matter physics** to understand how local actomyosin forces are organized and orchestrated from sub-cellular to supra-cellular scales to create complex (tissue) shape and dynamics. The broader goal of my research in this direction is to understand the dynamics of the elementary organizations of the actomyosin mechinary (e.g., subcellualr cortex, cellular junction etc) and to uncover the cross-talk between such organizations which drives the **tissue remodelling**.
+I apply concepts from **cell biology**, **mechanobiology** and **soft-condensed matter physics** to understand how local actomyosin forces are organized and orchestrated from sub-cellular to supra-cellular scales to create complex (tissue) shapes and dynamics. The broader goal of my research in this direction is to understand the dynamics of the elementary organizations of the actomyosin machinery (e.g., subcellular cortex, cellular junction etc) and to uncover the cross-talk between such organizations that drive the **tissue remodelling**.
 
 ![alt text](https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41467-017-01130-1/MediaObjects/41467_2017_1130_Fig6_HTML.jpg?as=webp)
 *Possible mechanisms for the movement of actomyosin-dense structures in an active affine elastomer. [Check out the work here](https://www.nature.com/articles/s41467-017-01130-1)*
@@ -21,7 +21,7 @@ I apply concepts from **cell biology**, **mechanobiology** and **soft-condensed 
 <iframe width="420" height="315" src="https://www.youtube.com/embed/3S5A1Zv2W1c" frameborder="0" allowfullscreen></iframe>
 
 ### Self-organization of intracellular structures:
-I combine ideas from statistical mechanics, cell biology and systems biology to study the design principles employed in dynamic self-organization and size-regulation of various organelles and intracellular structures. I have used chemical master equation and stochastic reaction network and hydrodynamics to describe the problems of self-organization.
+I combine ideas from statistical mechanics, cell biology and systems biology to study the design principles employed in dynamic self-organization and size-regulation of various organelles and intracellular structures. I have used chemical master equations and stochastic reaction networks and hydrodynamics to describe the problems of self-organization.
 
 <img src="https://www.mdpi.com/cells/cells-09-01646/article_deploy/html/images/cells-09-01646-g003.png" >  
 
