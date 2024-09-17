@@ -7,7 +7,7 @@
   </div>
 </body>
 <br/>
-Currently I am a postdoctoral fellow in the [James Frank Institute](https://jamesfranckinstitute.uchicago.edu/) at The University of Chicago working with Prof. [Suri Vaikuntanathan](https://vaikuntanathan-group.uchicago.edu/). My primary research interests lie in understanding the physical principles that drive the complex and rich dynamics seen in **living active matter systems**. My current research activities are mainly focused on understanding how physical learning leads to mechanochemical adaptation at a cellular or tissue level, studying the formation and size regulation of intracellular structures (e.g., filaments, networks, organelles, condensates etc), and studying the collective dynamics and self-organization of active elements (e.g., growing filaments, contractile actomyosin network, cell junction etc) seen across the scales from the sub-cellular cytoskeleton to supra-cellular structures and tissues. I employ various analytical and computational methods ranging from coarse grained active hydrodynamic description to stochastic reaction network and microscopic molecular dynamics simulations, to model and
+Currently I am a postdoctoral fellow in the [James Franck Institute](https://jamesfranckinstitute.uchicago.edu/) at The University of Chicago working with Prof. [Suri Vaikuntanathan](https://vaikuntanathan-group.uchicago.edu/). My primary research interests lie in understanding the physical principles that drive the complex and rich dynamics seen in **living active matter systems**. My current research activities are mainly focused on understanding how physical learning leads to mechanochemical adaptation at a cellular or tissue level, studying the formation and size regulation of intracellular structures (e.g., filaments, networks, organelles, condensates etc), and studying the collective dynamics and self-organization of active elements (e.g., growing filaments, contractile actomyosin network, cell junction etc) seen across the scales from the sub-cellular cytoskeleton to supra-cellular structures and tissues. I employ various analytical and computational methods ranging from coarse grained active hydrodynamic description to stochastic reaction network and microscopic molecular dynamics simulations, to model and
 study biological systems.
 
 ## My Research
@@ -43,12 +43,12 @@ I combine ideas from statistical mechanics, cell biology and systems biology to 
 See all my publications in the [Google Scholar page](https://scholar.google.com/citations?user=jW_aHa8AAAAJ&hl=en)
 
 ### Contact
- Wean Hall Room: 6303\
- Department of Physics\
- Carnegie Mellon Univerity\
- Pittsburgh, PA 15213\
+ CGIS Room: 145\
+ James Franck Institute\
+ The Univerity of Chicago\
+ Chicago, IL 60637\
  United States\
- Email: debsankb@andrew.cmu.edu\
+ Email: dsbanerjee@uchicago.edu\
  Email: debsankar1988@gmail.com\
  [Find me on Twitter](https://twitter.com/DebSBanerjee1)\
  [ORCiD](https://orcid.org/0000-0003-4452-7982)
