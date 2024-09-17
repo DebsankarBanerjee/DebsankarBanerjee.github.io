@@ -29,6 +29,11 @@ I combine ideas from statistical mechanics, cell biology and systems biology to 
 
 <iframe width="420" height="315" src="https://youtube.com/embed/oCbDRSGyCu4" frameborder="0" allowfullscreen></iframe>
 
+### Physical learning in biological systems:
+Traditionally, learning has been studied in neuroscience to understand how the assembly of neurons and modifications of synaptic transmission between them (i.e., synaptic plasticity) facilitates learning in the brain. On the other
+hand, learning in physical systems is an emerging field of study in material science and engineering, where physical systems, without neurons, can adapt their interactions autonomously based on local responses in the
+presence of a stimulus to acquire functionality or a desired response. Living matter systems are dynamically self-organized with non-equilibrium forces and continual turnover of their components, and my studies aim to understand how such remodelling processes and active forces influence (facilitate or suppress) physical learning in the context of cytoskeletal dynamics and tissue morphogenesis.
+
 ## My Publications
 ### Key Publications: 
  <ul>
