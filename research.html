@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Research · Deb Sankar Banerjee</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Crimson+Pro:ital,wght@0,300;0,400;1,300&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #0d1117;
+      --deep: #111827;
+      --surface: #1a2235;
+      --card: #1e2d44;
+      --gold: #f0b429;
+      --amber: #fbbf24;
+      --cream: #f5f0e8;
+      --muted: #8a9bb5;
+      --text: #d4dce8;
+      --border: rgba(240,180,41,0.18);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Crimson Pro', Georgia, serif;
+      background: var(--ink);
+      color: var(--text);
+      min-height: 100vh;
+      font-size: 18px;
+      line-height: 1.7;
+    }
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 2.5rem; height: 64px;
+      background: rgba(13,17,23,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-logo {
+      font-family: 'Playfair Display', serif; font-size: 1.1rem;
+      color: var(--gold); letter-spacing: 0.03em; text-decoration: none;
+    }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a {
+      font-family: 'JetBrains Mono', monospace; font-size: 0.75rem;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--muted); text-decoration: none; transition: color 0.2s;
+    }
+    .nav-links a:hover, .nav-links a.active { color: var(--gold); }
+
+    /* PAGE HEADER */
+    .page-header {
+      padding: 140px 5vw 5rem;
+      position: relative; overflow: hidden;
+      border-bottom: 1px solid var(--border);
+    }
+    .page-header::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse 50% 80% at 90% 50%, rgba(240,180,41,0.06) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .page-label {
+      font-family: 'JetBrains Mono', monospace; font-size: 0.7rem;
+      letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 1rem;
+      display: flex; align-items: center; gap: 0.7rem;
+    }
+    .page-label::before {
+      content: ''; display: inline-block; width: 28px; height: 1px; background: var(--gold);
+    }
+    .page-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.4rem, 5vw, 4rem);
+      color: var(--cream); line-height: 1.1; margin-bottom: 1.2rem;
+    }
+    .page-title em { font-style: italic; color: var(--gold); }
+    .page-intro {
+      max-width: 700px; font-size: 1.1rem; color: var(--muted);
+      font-style: italic; line-height: 1.8;
+    }
+
+    /* RESEARCH SECTIONS */
+    .research-section {
+      padding: 6rem 5vw;
+      border-bottom: 1px solid var(--border);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: start;
+      animation: fadeUp 0.7s ease both;
+    }
+    .research-section:nth-child(even) { direction: rtl; }
+    .research-section:nth-child(even) > * { direction: ltr; }
+    .rs-label {
+      font-family: 'JetBrains Mono', monospace; font-size: 0.65rem;
+      letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 0.6rem;
+    }
+    .rs-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+      color: var(--cream); margin-bottom: 1.5rem;
+      line-height: 1.2;
+    }
+    .rs-body { font-size: 1rem; color: var(--text); line-height: 1.85; }
+    .rs-body p { margin-bottom: 1rem; }
+    .rs-body strong { color: var(--cream); font-weight: 600; }
+
+    .rs-media { display: flex; flex-direction: column; gap: 1.2rem; }
+    .rs-img {
+      width: 100%; border-radius: 6px;
+      border: 1px solid var(--border);
+      overflow: hidden; background: var(--surface);
+    }
+    .rs-img img { width: 100%; display: block; }
+    .rs-img figcaption {
+      padding: 0.6rem 1rem;
+      font-family: 'JetBrains Mono', monospace; font-size: 0.65rem;
+      letter-spacing: 0.06em; color: var(--muted); line-height: 1.5;
+    }
+    .rs-img figcaption a { color: var(--gold); text-decoration: none; }
+    .rs-img figcaption a:hover { text-decoration: underline; }
+
+    .rs-video {
+      position: relative; padding-bottom: 56.25%;
+      border-radius: 6px; overflow: hidden;
+      border: 1px solid var(--border);
+    }
+    .rs-video iframe {
+      position: absolute; inset: 0; width: 100%; height: 100%; border: none;
+    }
+
+    .tag-list { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1.5rem; }
+    .tag {
+      font-family: 'JetBrains Mono', monospace; font-size: 0.65rem;
+      letter-spacing: 0.08em; text-transform: uppercase;
+      padding: 0.3rem 0.75rem; border-radius: 2px;
+      border: 1px solid rgba(240,180,41,0.3);
+      color: var(--gold-dim, #c48e1a);
+    }
+
+    footer {
+      padding: 2.5rem 5vw;
+      display: flex; align-items: center; justify-content: space-between;
+      font-family: 'JetBrains Mono', monospace; font-size: 0.7rem;
+      color: var(--muted); letter-spacing: 0.08em; flex-wrap: wrap; gap: 1rem;
+    }
+    footer a { color: var(--muted); text-decoration: none; }
+    footer a:hover { color: var(--gold); }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 900px) {
+      .research-section { grid-template-columns: 1fr; direction: ltr; gap: 2.5rem; }
+      .research-section:nth-child(even) { direction: ltr; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="index.html">DSB</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="research.html" class="active">Research</a></li>
+    <li><a href="publications.html">Publications</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<header class="page-header">
+  <div class="page-label">Research</div>
+  <h1 class="page-title">Physics of<br><em>Living Matter</em></h1>
+  <p class="page-intro">
+    I employ analytical and computational methods — from active hydrodynamics and stochastic
+    reaction networks to molecular dynamics simulations — to model and study biological systems.
+  </p>
+</header>
+
+<!-- Section 1 -->
+<section class="research-section" id="cytoskeletal">
+  <div class="rs-content">
+    <div class="rs-label">Research Area 01</div>
+    <h2 class="rs-title">Cytoskeletal Dynamics Across Scales</h2>
+    <div class="rs-body">
+      <p>
+        I apply concepts from <strong>cell biology</strong>, <strong>mechanobiology</strong>,
+        and <strong>soft-condensed matter physics</strong> to understand how local actomyosin forces
+        are organized and orchestrated from sub-cellular to supra-cellular scales to create
+        complex tissue shapes and dynamics.
+      </p>
+      <p>
+        The broader goal of my research in this direction is to understand the dynamics of the
+        elementary organizations of the actomyosin machinery — such as subcellular cortex and
+        cellular junctions — and to uncover the cross-talk between such organizations that
+        drive <strong>tissue remodelling</strong>.
+      </p>
+    </div>
+    <div class="tag-list">
+      <span class="tag">Actomyosin</span>
+      <span class="tag">Active Elastomer</span>
+      <span class="tag">Tissue Remodelling</span>
+      <span class="tag">Mechanobiology</span>
+    </div>
+  </div>
+  <div class="rs-media">
+    <figure class="rs-img">
+      <img src="https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41467-017-01130-1/MediaObjects/41467_2017_1130_Fig6_HTML.jpg?as=webp"
+           alt="Actomyosin movement mechanisms" />
+      <figcaption>
+        Possible mechanisms for the movement of actomyosin-dense structures in an active affine elastomer.
+        <a href="https://www.nature.com/articles/s41467-017-01130-1" target="_blank">Nat. Commun. (2017) →</a>
+      </figcaption>
+    </figure>
+    <div class="rs-video">
+      <iframe src="https://www.youtube.com/embed/3S5A1Zv2W1c" allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- Section 2 -->
+<section class="research-section" id="self-organization">
+  <div class="rs-content">
+    <div class="rs-label">Research Area 02</div>
+    <h2 class="rs-title">Self-Organization of Intracellular Structures</h2>
+    <div class="rs-body">
+      <p>
+        I combine ideas from <strong>statistical mechanics</strong>, cell biology, and systems biology
+        to study the design principles employed in dynamic self-organization and size-regulation
+        of various organelles and intracellular structures.
+      </p>
+      <p>
+        I have used chemical master equations, stochastic reaction networks, and hydrodynamics
+        to describe problems of self-organization in filaments, networks, organelles, and
+        condensates.
+      </p>
+    </div>
+    <div class="tag-list">
+      <span class="tag">Organelle Size Regulation</span>
+      <span class="tag">Stochastic Networks</span>
+      <span class="tag">Statistical Mechanics</span>
+      <span class="tag">Condensates</span>
+    </div>
+  </div>
+  <div class="rs-media">
+    <figure class="rs-img">
+      <img src="https://www.mdpi.com/cells/cells-09-01646/article_deploy/html/images/cells-09-01646-g003.png"
+           alt="Size-regulated symmetry breaking" />
+      <figcaption>
+        Size-regulated symmetry breaking in single cells.
+        <a href="https://www.mdpi.com/2073-4409/9/7/1646" target="_blank">Cells (2020) →</a>
+      </figcaption>
+    </figure>
+    <div class="rs-video">
+      <iframe src="https://youtube.com/embed/oCbDRSGyCu4" allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- Section 3 -->
+<section class="research-section" id="learning">
+  <div class="rs-content">
+    <div class="rs-label">Research Area 03</div>
+    <h2 class="rs-title">Physical Learning in Biological Systems</h2>
+    <div class="rs-body">
+      <p>
+        Traditionally, learning has been studied in neuroscience through synaptic plasticity and
+        neural assemblies. An emerging parallel field explores how physical systems — without
+        neurons — can <strong>adapt their interactions autonomously</strong> based on local
+        responses to acquire functionality or a desired response.
+      </p>
+      <p>
+        Living matter systems are dynamically self-organized with non-equilibrium forces and
+        continual turnover of their components. My studies aim to understand how such remodelling
+        processes and active forces influence — facilitate or suppress —
+        <strong>physical learning</strong> in the context of cytoskeletal dynamics and
+        tissue morphogenesis.
+      </p>
+    </div>
+    <div class="tag-list">
+      <span class="tag">Physical Learning</span>
+      <span class="tag">Non-Equilibrium</span>
+      <span class="tag">Morphogenesis</span>
+      <span class="tag">Mechanochemical Adaptation</span>
+    </div>
+  </div>
+  <div class="rs-media">
+    <!-- Placeholder visual for physical learning -->
+    <div style="background: var(--surface); border: 1px solid var(--border); border-radius: 6px; padding: 3rem 2rem; text-align: center;">
+      <div style="font-family:'Playfair Display',serif; font-size:4rem; color:rgba(240,180,41,0.2); margin-bottom:1rem;">∂</div>
+      <p style="font-family:'JetBrains Mono',monospace; font-size:0.7rem; letter-spacing:0.1em; color:var(--muted); text-transform:uppercase;">
+        Emerging Research Direction
+      </p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span>© 2024 Deb Sankar Banerjee · University of Chicago</span>
+  <span>
+    <a href="https://scholar.google.com/citations?user=jW_aHa8AAAAJ&hl=en" target="_blank">Google Scholar</a>
+    &nbsp;·&nbsp;
+    <a href="https://twitter.com/DebSBanerjee1" target="_blank">Twitter</a>
+    &nbsp;·&nbsp;
+    <a href="https://orcid.org/0000-0003-4452-7982" target="_blank">ORCiD</a>
+  </span>
+</footer>
+
+</body>
+</html>
