@@ -1,9 +1,13 @@
-theme: jekyll-theme-cayman
-remote_theme: pages-themes/cayman@v0.2.0
-plugins:
-- jekyll-remote-theme # add this line to the plugins list if you already have one
 title: Deb Sankar's homepage
 description: My research on the physics of living systems
-classes: wide
 github:
   is_project_page: false
+ 
+# Disable Jekyll theme — using fully custom HTML/CSS
+theme: null
+ 
+plugins: []
+ 
+# Tell Jekyll not to process these files
+exclude:
+  - README.md
