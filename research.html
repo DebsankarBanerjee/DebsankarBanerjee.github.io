@@ -1,315 +1,263 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Research · Deb Sankar Banerjee</title>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Research · Banerjee Lab</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Crimson+Pro:ital,wght@0,300;0,400;1,300&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
   <style>
-    :root {
-      --ink: #0d1117;
-      --deep: #111827;
-      --surface: #1a2235;
-      --card: #1e2d44;
-      --gold: #f0b429;
-      --amber: #fbbf24;
-      --cream: #f5f0e8;
-      --muted: #8a9bb5;
-      --text: #d4dce8;
-      --border: rgba(240,180,41,0.18);
-    }
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body {
-      font-family: 'Crimson Pro', Georgia, serif;
-      background: var(--ink);
-      color: var(--text);
-      min-height: 100vh;
-      font-size: 18px;
-      line-height: 1.7;
-    }
-    nav {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 0 2.5rem; height: 64px;
-      background: rgba(13,17,23,0.92);
-      backdrop-filter: blur(12px);
+    .research-block {
+      padding: 5.5rem 5vw;
       border-bottom: 1px solid var(--border);
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 5rem; align-items: start;
     }
-    .nav-logo {
-      font-family: 'Playfair Display', serif; font-size: 1.1rem;
-      color: var(--gold); letter-spacing: 0.03em; text-decoration: none;
-    }
-    .nav-links { display: flex; gap: 2rem; list-style: none; }
-    .nav-links a {
-      font-family: 'JetBrains Mono', monospace; font-size: 0.75rem;
-      letter-spacing: 0.12em; text-transform: uppercase;
-      color: var(--muted); text-decoration: none; transition: color 0.2s;
-    }
-    .nav-links a:hover, .nav-links a.active { color: var(--gold); }
+    .research-block:nth-child(even) .rb-media { order: -1; }
 
-    /* PAGE HEADER */
-    .page-header {
-      padding: 140px 5vw 5rem;
-      position: relative; overflow: hidden;
-      border-bottom: 1px solid var(--border);
-    }
-    .page-header::before {
-      content: '';
-      position: absolute; inset: 0;
-      background: radial-gradient(ellipse 50% 80% at 90% 50%, rgba(240,180,41,0.06) 0%, transparent 70%);
-      pointer-events: none;
-    }
-    .page-label {
-      font-family: 'JetBrains Mono', monospace; font-size: 0.7rem;
-      letter-spacing: 0.2em; text-transform: uppercase;
-      color: var(--gold); margin-bottom: 1rem;
-      display: flex; align-items: center; gap: 0.7rem;
-    }
-    .page-label::before {
-      content: ''; display: inline-block; width: 28px; height: 1px; background: var(--gold);
-    }
-    .page-title {
+    .rb-num {
       font-family: 'Playfair Display', serif;
-      font-size: clamp(2.4rem, 5vw, 4rem);
-      color: var(--cream); line-height: 1.1; margin-bottom: 1.2rem;
+      font-size: 5rem; color: rgba(240,180,41,0.08);
+      line-height: 1; margin-bottom: -0.5rem; font-style: italic;
     }
-    .page-title em { font-style: italic; color: var(--gold); }
-    .page-intro {
-      max-width: 700px; font-size: 1.1rem; color: var(--muted);
-      font-style: italic; line-height: 1.8;
-    }
-
-    /* RESEARCH SECTIONS */
-    .research-section {
-      padding: 6rem 5vw;
-      border-bottom: 1px solid var(--border);
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 5rem;
-      align-items: start;
-      animation: fadeUp 0.7s ease both;
-    }
-    .research-section:nth-child(even) { direction: rtl; }
-    .research-section:nth-child(even) > * { direction: ltr; }
-    .rs-label {
-      font-family: 'JetBrains Mono', monospace; font-size: 0.65rem;
-      letter-spacing: 0.2em; text-transform: uppercase;
-      color: var(--gold); margin-bottom: 0.6rem;
-    }
-    .rs-title {
+    .rb-label { /* inherits .label */ margin-bottom: 0.4rem; }
+    .rb-title {
       font-family: 'Playfair Display', serif;
       font-size: clamp(1.6rem, 2.5vw, 2.2rem);
-      color: var(--cream); margin-bottom: 1.5rem;
-      line-height: 1.2;
+      color: var(--cream); line-height: 1.18; margin-bottom: 1rem;
     }
-    .rs-body { font-size: 1rem; color: var(--text); line-height: 1.85; }
-    .rs-body p { margin-bottom: 1rem; }
-    .rs-body strong { color: var(--cream); font-weight: 600; }
+    .big-question {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.05rem; font-style: italic;
+      color: var(--gold); border-left: 2px solid var(--gold);
+      padding-left: 1rem; margin: 1.4rem 0; line-height: 1.65;
+    }
+    .rb-body { font-size: 1rem; color: var(--text); line-height: 1.88; }
+    .rb-body p { margin-bottom: 1rem; }
+    .rb-body strong { color: var(--cream); }
 
-    .rs-media { display: flex; flex-direction: column; gap: 1.2rem; }
-    .rs-img {
-      width: 100%; border-radius: 6px;
-      border: 1px solid var(--border);
-      overflow: hidden; background: var(--surface);
+    .rb-media { display: flex; flex-direction: column; gap: 1.2rem; }
+    .media-fig {
+      border: 1px solid var(--border); border-radius: 6px; overflow: hidden;
+      background: var(--surface);
     }
-    .rs-img img { width: 100%; display: block; }
-    .rs-img figcaption {
-      padding: 0.6rem 1rem;
-      font-family: 'JetBrains Mono', monospace; font-size: 0.65rem;
-      letter-spacing: 0.06em; color: var(--muted); line-height: 1.5;
+    .media-fig img { width: 100%; display: block; }
+    .media-fig figcaption {
+      padding: 0.6rem 1rem; font-family: 'JetBrains Mono', monospace;
+      font-size: 0.62rem; letter-spacing: 0.06em; color: var(--muted); line-height: 1.5;
     }
-    .rs-img figcaption a { color: var(--gold); text-decoration: none; }
-    .rs-img figcaption a:hover { text-decoration: underline; }
-
-    .rs-video {
+    .media-fig figcaption a { color: var(--gold); text-decoration: none; }
+    .media-fig figcaption a:hover { text-decoration: underline; }
+    .media-video {
       position: relative; padding-bottom: 56.25%;
-      border-radius: 6px; overflow: hidden;
-      border: 1px solid var(--border);
+      border-radius: 6px; overflow: hidden; border: 1px solid var(--border);
     }
-    .rs-video iframe {
-      position: absolute; inset: 0; width: 100%; height: 100%; border: none;
+    .media-video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: none; }
+    .media-placeholder {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 6px; padding: 3.5rem 2rem; text-align: center;
     }
-
-    .tag-list { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1.5rem; }
-    .tag {
+    .media-placeholder .sym {
+      font-family: 'Playfair Display', serif;
+      font-size: 5rem; color: rgba(240,180,41,0.12); line-height: 1; margin-bottom: 0.8rem;
+    }
+    .media-placeholder p {
       font-family: 'JetBrains Mono', monospace; font-size: 0.65rem;
-      letter-spacing: 0.08em; text-transform: uppercase;
-      padding: 0.3rem 0.75rem; border-radius: 2px;
-      border: 1px solid rgba(240,180,41,0.3);
-      color: var(--gold-dim, #c48e1a);
+      letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted);
     }
 
-    footer {
-      padding: 2.5rem 5vw;
-      display: flex; align-items: center; justify-content: space-between;
-      font-family: 'JetBrains Mono', monospace; font-size: 0.7rem;
-      color: var(--muted); letter-spacing: 0.08em; flex-wrap: wrap; gap: 1rem;
+    .core-idea {
+      margin-top: 1.5rem; padding: 1rem 1.3rem;
+      background: rgba(240,180,41,0.05); border-radius: 4px;
+      border: 1px solid rgba(240,180,41,0.15);
+      font-size: 0.9rem; color: var(--muted); line-height: 1.65;
     }
-    footer a { color: var(--muted); text-decoration: none; }
-    footer a:hover { color: var(--gold); }
-
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to   { opacity: 1; transform: translateY(0); }
+    .core-idea strong {
+      font-family: 'JetBrains Mono', monospace; font-size: 0.62rem;
+      letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold);
+      display: block; margin-bottom: 0.3rem;
     }
 
     @media (max-width: 900px) {
-      .research-section { grid-template-columns: 1fr; direction: ltr; gap: 2.5rem; }
-      .research-section:nth-child(even) { direction: ltr; }
+      .research-block { grid-template-columns: 1fr; gap: 2.5rem; }
+      .research-block:nth-child(even) .rb-media { order: 0; }
     }
   </style>
 </head>
 <body>
-
 <nav>
-  <a class="nav-logo" href="index.html">DSB</a>
+  <a class="nav-logo" href="index.html">Deb Sankar Banerjee<span>Soft & Living Adaptive Matter Lab</span></a>
   <ul class="nav-links">
     <li><a href="index.html">Home</a></li>
     <li><a href="research.html" class="active">Research</a></li>
     <li><a href="publications.html">Publications</a></li>
+    <li><a href="people.html">People</a></li>
+    <li><a href="news.html">News</a></li>
     <li><a href="contact.html">Contact</a></li>
   </ul>
 </nav>
 
 <header class="page-header">
   <div class="page-label">Research</div>
-  <h1 class="page-title">Physics of<br><em>Living Matter</em></h1>
+  <h1 class="page-title">Self-Organization in<br><em>Soft &amp; Living Matter</em></h1>
   <p class="page-intro">
-    I employ analytical and computational methods — from active hydrodynamics and stochastic
-    reaction networks to molecular dynamics simulations — to model and study biological systems.
+    We use theoretical modeling, computational simulations, and data-driven analysis to uncover
+    how non-equilibrium processes generate hierarchical organization and adaptive mechanical
+    behaviors in soft and living matter systems.
   </p>
 </header>
 
-<!-- Section 1 -->
-<section class="research-section" id="cytoskeletal">
-  <div class="rs-content">
-    <div class="rs-label">Research Area 01</div>
-    <h2 class="rs-title">Cytoskeletal Dynamics Across Scales</h2>
-    <div class="rs-body">
+<!-- THEME 01 -->
+<div class="research-block" id="cytoskeletal">
+  <div class="rb-content">
+    <div class="rb-num">01</div>
+    <div class="label rb-label">Research Theme</div>
+    <h2 class="rb-title">Cytoskeletal Dynamics &amp; Self-Organization</h2>
+    <div class="big-question">
+      How do microscopic kinetic rules governing filament assembly generate macroscopic morphologies and emergent mechanical response in growing filament networks?
+    </div>
+    <div class="rb-body">
       <p>
-        I apply concepts from <strong>cell biology</strong>, <strong>mechanobiology</strong>,
-        and <strong>soft-condensed matter physics</strong> to understand how local actomyosin forces
-        are organized and orchestrated from sub-cellular to supra-cellular scales to create
-        complex tissue shapes and dynamics.
+        Living cells maintain and remodel their cytoskeleton — a dynamic network of filaments, motors, and crosslinkers — to generate forces, control shape, and transmit mechanical signals. At growth rates exceeding structural relaxation timescales, filament growth itself drives the system far from equilibrium, creating non-equilibrium structures with non-trivial morphological and mechanical properties.
       </p>
       <p>
-        The broader goal of my research in this direction is to understand the dynamics of the
-        elementary organizations of the actomyosin machinery — such as subcellular cortex and
-        cellular junctions — and to uncover the cross-talk between such organizations that
-        drive <strong>tissue remodelling</strong>.
+        We study how <strong>actomyosin turnover</strong> generates pulsatile forces during morphogenesis, how F-actin curvature drives topological defect formation, and how membrane-cortex coupling regulates instabilities in biomimetic systems. We develop hydrodynamic and agent-based frameworks that link mesoscopic architecture to emergent mechanics, uncovering predictive principles for living matter from sub-cellular cortex to supra-cellular tissue.
       </p>
     </div>
     <div class="tag-list">
-      <span class="tag">Actomyosin</span>
-      <span class="tag">Active Elastomer</span>
-      <span class="tag">Tissue Remodelling</span>
-      <span class="tag">Mechanobiology</span>
+      <span class="tag">Actomyosin</span><span class="tag">Active Elastomer</span>
+      <span class="tag">Tissue Remodelling</span><span class="tag">Filament Networks</span>
+      <span class="tag">Topological Defects</span><span class="tag">Shape Memory</span>
+    </div>
+    <div class="core-idea">
+      <strong>Core Idea</strong>
+      Study networks of growing filaments to understand how microscopic growth dynamics controls emergent network morphology and mechanical response — from molecular self-assembly to tissue-scale organization.
     </div>
   </div>
-  <div class="rs-media">
-    <figure class="rs-img">
-      <img src="https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41467-017-01130-1/MediaObjects/41467_2017_1130_Fig6_HTML.jpg?as=webp"
-           alt="Actomyosin movement mechanisms" />
-      <figcaption>
-        Possible mechanisms for the movement of actomyosin-dense structures in an active affine elastomer.
-        <a href="https://www.nature.com/articles/s41467-017-01130-1" target="_blank">Nat. Commun. (2017) →</a>
-      </figcaption>
+  <div class="rb-media">
+    <figure class="media-fig">
+      <img src="https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41467-017-01130-1/MediaObjects/41467_2017_1130_Fig6_HTML.jpg?as=webp" alt="Actomyosin mechanisms"/>
+      <figcaption>Movement mechanisms in an active affine elastomer with turnover. <a href="https://www.nature.com/articles/s41467-017-01130-1" target="_blank">Nat. Commun. (2017) →</a></figcaption>
     </figure>
-    <div class="rs-video">
+    <div class="media-video">
       <iframe src="https://www.youtube.com/embed/3S5A1Zv2W1c" allowfullscreen></iframe>
     </div>
   </div>
-</section>
+</div>
 
-<!-- Section 2 -->
-<section class="research-section" id="self-organization">
-  <div class="rs-content">
-    <div class="rs-label">Research Area 02</div>
-    <h2 class="rs-title">Self-Organization of Intracellular Structures</h2>
-    <div class="rs-body">
+<!-- THEME 02 -->
+<div class="research-block" id="condensates">
+  <div class="rb-content">
+    <div class="rb-num">02</div>
+    <div class="label rb-label">Research Theme</div>
+    <h2 class="rb-title">Biomolecular Condensate Dynamics in Complex Media</h2>
+    <div class="big-question">
+      How does the non-equilibrium mechanical environment — network heterogeneity and active stress fluctuations — fundamentally alter condensate nucleation, growth, coarsening, and spatial positioning?
+    </div>
+    <div class="rb-body">
       <p>
-        I combine ideas from <strong>statistical mechanics</strong>, cell biology, and systems biology
-        to study the design principles employed in dynamic self-organization and size-regulation
-        of various organelles and intracellular structures.
+        Biomolecular condensates are membraneless compartments formed through liquid-liquid phase separation of proteins and nucleic acids. They serve critical cellular functions from gene transcription to DNA repair. While existing theories describe condensate formation in homogeneous liquids, cells present a dramatically different landscape: mechanically anisotropic, with crosslinked active elastic networks and motor-driven non-equilibrium stresses.
       </p>
       <p>
-        I have used chemical master equations, stochastic reaction networks, and hydrodynamics
-        to describe problems of self-organization in filaments, networks, organelles, and
-        condensates.
+        We discovered <strong>elastic ripening</strong> in chromatin-embedded condensates, showing how embedding network mechanics suppresses classical coarsening. We develop hydrodynamic and agent-based models to reveal how cells harness network heterogeneity and active processes to achieve precise condensate organization — establishing design principles for controlling phase-separated structures in both biological and synthetic systems.
       </p>
     </div>
     <div class="tag-list">
-      <span class="tag">Organelle Size Regulation</span>
-      <span class="tag">Stochastic Networks</span>
-      <span class="tag">Statistical Mechanics</span>
-      <span class="tag">Condensates</span>
+      <span class="tag">LLPS</span><span class="tag">Phase Separation</span>
+      <span class="tag">Elastic Ripening</span><span class="tag">Chromatin</span>
+      <span class="tag">Active Networks</span><span class="tag">Organelle Size</span>
+    </div>
+    <div class="core-idea">
+      <strong>Core Idea</strong>
+      Study biomolecular condensates embedded in active elastic networks to understand how the coupling of mechanics and phase separation gives rise to precise spatial organization and emergent computational capability.
     </div>
   </div>
-  <div class="rs-media">
-    <figure class="rs-img">
-      <img src="https://www.mdpi.com/cells/cells-09-01646/article_deploy/html/images/cells-09-01646-g003.png"
-           alt="Size-regulated symmetry breaking" />
-      <figcaption>
-        Size-regulated symmetry breaking in single cells.
-        <a href="https://www.mdpi.com/2073-4409/9/7/1646" target="_blank">Cells (2020) →</a>
-      </figcaption>
+  <div class="rb-media">
+    <figure class="media-fig">
+      <img src="https://www.mdpi.com/cells/cells-09-01646/article_deploy/html/images/cells-09-01646-g003.png" alt="Size-regulated symmetry breaking"/>
+      <figcaption>Size-regulated symmetry breaking in single cells. <a href="https://www.mdpi.com/2073-4409/9/7/1646" target="_blank">Cells (2020) →</a></figcaption>
     </figure>
-    <div class="rs-video">
+    <div class="media-video">
       <iframe src="https://youtube.com/embed/oCbDRSGyCu4" allowfullscreen></iframe>
     </div>
   </div>
-</section>
+</div>
 
-<!-- Section 3 -->
-<section class="research-section" id="learning">
-  <div class="rs-content">
-    <div class="rs-label">Research Area 03</div>
-    <h2 class="rs-title">Physical Learning in Biological Systems</h2>
-    <div class="rs-body">
+<!-- THEME 03 -->
+<div class="research-block" id="learning">
+  <div class="rb-content">
+    <div class="rb-num">03</div>
+    <div class="label rb-label">Research Theme</div>
+    <h2 class="rb-title">Physical Learning &amp; Adaptive Response in Active Matter</h2>
+    <div class="big-question">
+      Does continual structural turnover, non-equilibrium driving, and broken detailed balance fundamentally alter what physical systems — without neurons or brain — can learn?
+    </div>
+    <div class="rb-body">
       <p>
-        Traditionally, learning has been studied in neuroscience through synaptic plasticity and
-        neural assemblies. An emerging parallel field explores how physical systems — without
-        neurons — can <strong>adapt their interactions autonomously</strong> based on local
-        responses to acquire functionality or a desired response.
+        Physical learning is an emerging field demonstrating that materials without nervous systems can adapt their internal interactions autonomously, based on local responses to stimuli, to acquire functionality — a direct analogue to synaptic plasticity in neural networks. While physical learning has been demonstrated in passive systems at mechanical equilibrium, living matter operates far from equilibrium through ATP consumption, molecular motor activity, and continual component turnover.
       </p>
       <p>
-        Living matter systems are dynamically self-organized with non-equilibrium forces and
-        continual turnover of their components. My studies aim to understand how such remodelling
-        processes and active forces influence — facilitate or suppress —
-        <strong>physical learning</strong> in the context of cytoskeletal dynamics and
-        tissue morphogenesis.
+        We recently introduced a framework for <strong>physical learning in cytoskeletal networks</strong>, showing how mechanochemical feedback enables networks to learn input-output relations through biologically plausible dynamics. We now investigate how non-equilibrium features enhance learning capacity, accelerate adaptation, or enable qualitatively new functionalities — from cytoskeletal networks to epithelial tissues achieving morphogenetic outcomes through decentralized feedback.
       </p>
     </div>
     <div class="tag-list">
-      <span class="tag">Physical Learning</span>
-      <span class="tag">Non-Equilibrium</span>
-      <span class="tag">Morphogenesis</span>
-      <span class="tag">Mechanochemical Adaptation</span>
+      <span class="tag">Physical Learning</span><span class="tag">Mechanosensitivity</span>
+      <span class="tag">Non-Equilibrium</span><span class="tag">Morphogenesis</span>
+      <span class="tag">Contrastive Learning</span><span class="tag">Adaptive Matter</span>
+    </div>
+    <div class="core-idea">
+      <strong>Core Idea</strong>
+      Develop a unified theory of soft adaptive matter — bridging statistical physics and computation — to understand how living systems sense, remember, and adapt without centralized neural control.
     </div>
   </div>
-  <div class="rs-media">
-    <!-- Placeholder visual for physical learning -->
-    <div style="background: var(--surface); border: 1px solid var(--border); border-radius: 6px; padding: 3rem 2rem; text-align: center;">
-      <div style="font-family:'Playfair Display',serif; font-size:4rem; color:rgba(240,180,41,0.2); margin-bottom:1rem;">∂</div>
-      <p style="font-family:'JetBrains Mono',monospace; font-size:0.7rem; letter-spacing:0.1em; color:var(--muted); text-transform:uppercase;">
-        Emerging Research Direction
+  <div class="rb-media">
+    <div class="media-placeholder">
+      <div class="sym">∂ₜ</div>
+      <p>Emerging Research Direction</p>
+      <p style="margin-top:0.5rem; opacity:0.6;">PRX Life (2025) · PNAS (under review)</p>
+    </div>
+    <div class="media-placeholder" style="padding: 2rem;">
+      <p style="font-family:'Playfair Display',serif; font-size:0.95rem; color:var(--text); font-style:italic; line-height:1.7; text-align:left;">
+        "Learning via mechanosensitivity and activity in cytoskeletal networks"
       </p>
+      <p style="margin-top:0.8rem; font-family:'JetBrains Mono',monospace; font-size:0.62rem; letter-spacing:0.08em; color:var(--muted);">
+        Banerjee et al. · PRX Life (2025)
+      </p>
+      <a href="https://arxiv.org/abs/2504.15107" target="_blank" style="font-family:'JetBrains Mono',monospace; font-size:0.62rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--gold); text-decoration:none; display:inline-block; margin-top:0.6rem;">arXiv preprint →</a>
+    </div>
+  </div>
+</div>
+
+<section class="section">
+  <div class="label">Methods &amp; Tools</div>
+  <h2 class="section-title">How We Work</h2>
+  <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap:1rem;">
+    <div style="background:var(--card); border:1px solid var(--border); border-radius:6px; padding:1.5rem;">
+      <div style="font-family:'Playfair Display',serif; font-size:1rem; color:var(--cream); margin-bottom:0.5rem;">Analytical Theory</div>
+      <p style="font-size:0.88rem; color:var(--muted); line-height:1.65;">Active hydrodynamics, dynamical systems theory, stochastic modeling, chemical master equations</p>
+    </div>
+    <div style="background:var(--card); border:1px solid var(--border); border-radius:6px; padding:1.5rem;">
+      <div style="font-family:'Playfair Display',serif; font-size:1rem; color:var(--cream); margin-bottom:0.5rem;">Computational Simulation</div>
+      <p style="font-size:0.88rem; color:var(--muted); line-height:1.65;">Dynamic Monte Carlo, agent-based molecular dynamics, phase-field simulations, Gillespie algorithm</p>
+    </div>
+    <div style="background:var(--card); border:1px solid var(--border); border-radius:6px; padding:1.5rem;">
+      <div style="font-family:'Playfair Display',serif; font-size:1rem; color:var(--cream); margin-bottom:0.5rem;">Data-Driven Analysis</div>
+      <p style="font-size:0.88rem; color:var(--muted); line-height:1.65;">Machine learning, contrastive learning, deep neural networks, ML-enhanced parameter inference</p>
+    </div>
+    <div style="background:var(--card); border:1px solid var(--border); border-radius:6px; padding:1.5rem;">
+      <div style="font-family:'Playfair Display',serif; font-size:1rem; color:var(--cream); margin-bottom:0.5rem;">Multi-Scale Modeling</div>
+      <p style="font-size:0.88rem; color:var(--muted); line-height:1.65;">Coarse-grained hydrodynamics, continuum elasticity, connecting molecular to mesoscale to tissue</p>
     </div>
   </div>
 </section>
 
 <footer>
-  <span>© 2024 Deb Sankar Banerjee · University of Chicago</span>
+  <span>© 2025 Deb Sankar Banerjee · Soft &amp; Living Adaptive Matter Lab</span>
   <span>
-    <a href="https://scholar.google.com/citations?user=jW_aHa8AAAAJ&hl=en" target="_blank">Google Scholar</a>
-    &nbsp;·&nbsp;
-    <a href="https://twitter.com/DebSBanerjee1" target="_blank">Twitter</a>
-    &nbsp;·&nbsp;
+    <a href="https://scholar.google.com/citations?user=jW_aHa8AAAAJ&hl=en" target="_blank">Google Scholar</a> ·
+    <a href="https://twitter.com/DebSBanerjee1" target="_blank">Twitter/X</a> ·
     <a href="https://orcid.org/0000-0003-4452-7982" target="_blank">ORCiD</a>
   </span>
 </footer>
-
 </body>
 </html>

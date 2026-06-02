@@ -1,143 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact · Deb Sankar Banerjee</title>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact · Banerjee Lab</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Crimson+Pro:ital,wght@0,300;0,400;1,300&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
   <style>
-    :root {
-      --ink: #0d1117; --deep: #111827; --surface: #1a2235; --card: #1e2d44;
-      --gold: #f0b429; --amber: #fbbf24; --cream: #f5f0e8;
-      --muted: #8a9bb5; --text: #d4dce8; --border: rgba(240,180,41,0.18);
-    }
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: 'Crimson Pro', Georgia, serif;
-      background: var(--ink); color: var(--text);
-      min-height: 100vh; font-size: 18px; line-height: 1.7;
-    }
-    nav {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 0 2.5rem; height: 64px;
-      background: rgba(13,17,23,0.92); backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--border);
-    }
-    .nav-logo {
-      font-family: 'Playfair Display', serif; font-size: 1.1rem;
-      color: var(--gold); letter-spacing: 0.03em; text-decoration: none;
-    }
-    .nav-links { display: flex; gap: 2rem; list-style: none; }
-    .nav-links a {
-      font-family: 'JetBrains Mono', monospace; font-size: 0.75rem;
-      letter-spacing: 0.12em; text-transform: uppercase;
-      color: var(--muted); text-decoration: none; transition: color 0.2s;
-    }
-    .nav-links a:hover, .nav-links a.active { color: var(--gold); }
-
-    .page-header {
-      padding: 140px 5vw 5rem; position: relative; overflow: hidden;
-      border-bottom: 1px solid var(--border);
-    }
-    .page-header::before {
-      content: ''; position: absolute; inset: 0;
-      background: radial-gradient(ellipse 50% 80% at 10% 50%, rgba(240,180,41,0.06) 0%, transparent 70%);
-      pointer-events: none;
-    }
-    .page-label {
-      font-family: 'JetBrains Mono', monospace; font-size: 0.7rem;
-      letter-spacing: 0.2em; text-transform: uppercase;
-      color: var(--gold); margin-bottom: 1rem;
-      display: flex; align-items: center; gap: 0.7rem;
-    }
-    .page-label::before { content: ''; display: inline-block; width: 28px; height: 1px; background: var(--gold); }
-    .page-title {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(2.4rem, 5vw, 4rem);
-      color: var(--cream); line-height: 1.1; margin-bottom: 1.2rem;
-    }
-    .page-title em { font-style: italic; color: var(--gold); }
-
-    /* CONTACT LAYOUT */
-    .contact-layout {
-      display: grid;
-      grid-template-columns: 1.2fr 1fr;
-      gap: 5rem;
-      padding: 6rem 5vw;
-      align-items: start;
-    }
-
-    .contact-group { margin-bottom: 2.5rem; }
-    .contact-group-label {
+    .contact-layout { display: grid; grid-template-columns: 1.1fr 1fr; gap: 5rem; padding: 5rem 5vw; align-items: start; }
+    .contact-group { margin-bottom: 2.8rem; }
+    .cg-label {
       font-family: 'JetBrains Mono', monospace; font-size: 0.65rem;
-      letter-spacing: 0.2em; text-transform: uppercase;
-      color: var(--gold); margin-bottom: 1rem;
-      border-bottom: 1px solid var(--border); padding-bottom: 0.5rem;
+      letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold);
+      border-bottom: 1px solid var(--border); padding-bottom: 0.5rem; margin-bottom: 1rem;
     }
-
-    .address-block {
-      font-size: 1.05rem; line-height: 2; color: var(--text);
-    }
+    .address-block { font-size: 1rem; line-height: 2.1; color: var(--text); }
     .address-block strong { color: var(--cream); }
 
-    .contact-links { display: flex; flex-direction: column; gap: 0.75rem; }
-    .contact-link-item {
+    .contact-links { display: flex; flex-direction: column; gap: 0.7rem; }
+    .cl-item {
       display: flex; align-items: center; gap: 1rem;
-      padding: 0.9rem 1.2rem;
-      background: var(--card); border: 1px solid var(--border); border-radius: 5px;
-      text-decoration: none; color: var(--text);
+      padding: 0.9rem 1.1rem;
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: 5px; text-decoration: none; color: var(--text);
       transition: border-color 0.2s, transform 0.2s;
     }
-    .contact-link-item:hover { border-color: rgba(240,180,41,0.4); transform: translateX(4px); }
-    .link-icon {
-      width: 2rem; height: 2rem; border-radius: 50%;
-      background: rgba(240,180,41,0.12); border: 1px solid rgba(240,180,41,0.25);
+    .cl-item:hover { border-color: rgba(240,180,41,0.4); transform: translateX(4px); }
+    .cl-icon {
+      width: 34px; height: 34px; border-radius: 50%; flex-shrink: 0;
+      background: rgba(240,180,41,0.1); border: 1px solid rgba(240,180,41,0.22);
       display: flex; align-items: center; justify-content: center;
-      font-family: 'JetBrains Mono', monospace; font-size: 0.7rem;
-      color: var(--gold); flex-shrink: 0; font-weight: 500;
+      font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; color: var(--gold);
     }
-    .link-text { flex: 1; }
-    .link-label {
-      font-family: 'JetBrains Mono', monospace; font-size: 0.62rem;
-      letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted);
-      display: block; margin-bottom: 0.1rem;
-    }
-    .link-value { font-size: 0.95rem; color: var(--text); }
-    .link-arrow { color: var(--muted); font-size: 0.9rem; }
-    .contact-link-item:hover .link-arrow { color: var(--gold); }
+    .cl-text { flex: 1; }
+    .cl-label { font-family: 'JetBrains Mono', monospace; font-size: 0.58rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); display: block; margin-bottom: 0.1rem; }
+    .cl-val { font-size: 0.93rem; color: var(--text); }
+    .cl-arrow { color: var(--muted); font-size: 0.85rem; }
+    .cl-item:hover .cl-arrow { color: var(--gold); }
 
-    /* MAP EMBED */
-    .map-embed {
-      border: 1px solid var(--border); border-radius: 6px; overflow: hidden;
-      margin-top: 0.5rem;
-    }
-    .map-embed iframe { display: block; width: 100%; height: 250px; border: none; filter: grayscale(0.4) invert(0.85) hue-rotate(180deg); }
+    .map-wrap { border: 1px solid var(--border); border-radius: 6px; overflow: hidden; }
+    .map-wrap iframe { display: block; width: 100%; height: 240px; border: none; filter: grayscale(0.3) invert(0.88) hue-rotate(180deg); }
 
-    footer {
-      padding: 2.5rem 5vw;
-      display: flex; align-items: center; justify-content: space-between;
-      font-family: 'JetBrains Mono', monospace; font-size: 0.7rem;
-      color: var(--muted); letter-spacing: 0.08em; flex-wrap: wrap; gap: 1rem;
-      border-top: 1px solid var(--border);
-    }
-    footer a { color: var(--muted); text-decoration: none; }
-    footer a:hover { color: var(--gold); }
-
-    @media (max-width: 900px) {
-      .contact-layout { grid-template-columns: 1fr; gap: 3rem; }
-    }
+    @media (max-width: 900px) { .contact-layout { grid-template-columns: 1fr; gap: 3rem; } }
   </style>
 </head>
 <body>
-
 <nav>
-  <a class="nav-logo" href="index.html">DSB</a>
+  <a class="nav-logo" href="index.html">Deb Sankar Banerjee<span>Soft & Living Adaptive Matter Lab</span></a>
   <ul class="nav-links">
     <li><a href="index.html">Home</a></li>
     <li><a href="research.html">Research</a></li>
     <li><a href="publications.html">Publications</a></li>
+    <li><a href="people.html">People</a></li>
+    <li><a href="news.html">News</a></li>
     <li><a href="contact.html" class="active">Contact</a></li>
   </ul>
 </nav>
@@ -145,13 +60,13 @@
 <header class="page-header">
   <div class="page-label">Contact</div>
   <h1 class="page-title">Get in<br><em>Touch</em></h1>
+  <p class="page-intro">For research inquiries, collaboration, or prospective student/postdoc applications — reach out anytime.</p>
 </header>
 
 <div class="contact-layout">
-
   <div>
     <div class="contact-group">
-      <div class="contact-group-label">Office Address</div>
+      <div class="cg-label">Current Address</div>
       <div class="address-block">
         <strong>CGIS Room 145</strong><br>
         James Franck Institute<br>
@@ -160,93 +75,80 @@
         United States
       </div>
     </div>
-
     <div class="contact-group">
-      <div class="contact-group-label">Location</div>
-      <div class="map-embed">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2974.7!2d-87.602!3d41.790!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880e293e6f62571d%3A0xbe99c5f1e4fe13a3!2sJames%20Franck%20Institute%2C%20University%20of%20Chicago!5e0!3m2!1sen!2sus!4v1"
-          allowfullscreen loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
+      <div class="cg-label">New Position</div>
+      <div style="display:inline-flex; align-items:center; gap:0.7rem; background:rgba(240,180,41,0.07); border:1px solid rgba(240,180,41,0.2); border-radius:3px; padding:0.65rem 1rem; font-family:'JetBrains Mono',monospace; font-size:0.65rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--gold);">
+        <span style="width:6px;height:6px;border-radius:50%;background:var(--gold);animation:pulse 2s infinite;"></span>
+        Announcement coming soon
+      </div>
+      <style>@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.3}}</style>
+    </div>
+    <div class="contact-group">
+      <div class="cg-label">Location</div>
+      <div class="map-wrap">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2974.7!2d-87.602!3d41.790!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880e293e6f62571d%3A0xbe99c5f1e4fe13a3!2sJames%20Franck%20Institute%2C%20University%20of%20Chicago!5e0!3m2!1sen!2sus!4v1" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </div>
   </div>
 
   <div>
     <div class="contact-group">
-      <div class="contact-group-label">Email</div>
+      <div class="cg-label">Email</div>
       <div class="contact-links">
-        <a class="contact-link-item" href="mailto:dsbanerjee@uchicago.edu">
-          <div class="link-icon">@</div>
-          <div class="link-text">
-            <span class="link-label">Institutional</span>
-            <span class="link-value">dsbanerjee@uchicago.edu</span>
-          </div>
-          <span class="link-arrow">→</span>
+        <a class="cl-item" href="mailto:dsbanerjee@uchicago.edu">
+          <div class="cl-icon">@</div>
+          <div class="cl-text"><span class="cl-label">Institutional</span><span class="cl-val">dsbanerjee@uchicago.edu</span></div>
+          <span class="cl-arrow">→</span>
         </a>
-        <a class="contact-link-item" href="mailto:debsankar1988@gmail.com">
-          <div class="link-icon">@</div>
-          <div class="link-text">
-            <span class="link-label">Personal</span>
-            <span class="link-value">debsankar1988@gmail.com</span>
-          </div>
-          <span class="link-arrow">→</span>
+        <a class="cl-item" href="mailto:debsankar1988@gmail.com">
+          <div class="cl-icon">@</div>
+          <div class="cl-text"><span class="cl-label">Personal</span><span class="cl-val">debsankar1988@gmail.com</span></div>
+          <span class="cl-arrow">→</span>
         </a>
       </div>
     </div>
 
     <div class="contact-group">
-      <div class="contact-group-label">Online Profiles</div>
+      <div class="cg-label">Academic Profiles</div>
       <div class="contact-links">
-        <a class="contact-link-item" href="https://scholar.google.com/citations?user=jW_aHa8AAAAJ&hl=en" target="_blank">
-          <div class="link-icon">GS</div>
-          <div class="link-text">
-            <span class="link-label">Academic</span>
-            <span class="link-value">Google Scholar</span>
-          </div>
-          <span class="link-arrow">↗</span>
+        <a class="cl-item" href="https://scholar.google.com/citations?user=jW_aHa8AAAAJ&hl=en" target="_blank">
+          <div class="cl-icon">GS</div>
+          <div class="cl-text"><span class="cl-label">Academic</span><span class="cl-val">Google Scholar</span></div>
+          <span class="cl-arrow">↗</span>
         </a>
-        <a class="contact-link-item" href="https://orcid.org/0000-0003-4452-7982" target="_blank">
-          <div class="link-icon">iD</div>
-          <div class="link-text">
-            <span class="link-label">Research ID</span>
-            <span class="link-value">ORCiD 0000-0003-4452-7982</span>
-          </div>
-          <span class="link-arrow">↗</span>
+        <a class="cl-item" href="https://orcid.org/0000-0003-4452-7982" target="_blank">
+          <div class="cl-icon">iD</div>
+          <div class="cl-text"><span class="cl-label">Research ID</span><span class="cl-val">ORCiD 0000-0003-4452-7982</span></div>
+          <span class="cl-arrow">↗</span>
         </a>
-        <a class="contact-link-item" href="https://twitter.com/DebSBanerjee1" target="_blank">
-          <div class="link-icon">𝕏</div>
-          <div class="link-text">
-            <span class="link-label">Social</span>
-            <span class="link-value">@DebSBanerjee1</span>
-          </div>
-          <span class="link-arrow">↗</span>
+      </div>
+    </div>
+
+    <div class="contact-group">
+      <div class="cg-label">Social</div>
+      <div class="contact-links">
+        <a class="cl-item" href="https://twitter.com/DebSBanerjee1" target="_blank">
+          <div class="cl-icon">𝕏</div>
+          <div class="cl-text"><span class="cl-label">Twitter / X</span><span class="cl-val">@DebSBanerjee1</span></div>
+          <span class="cl-arrow">↗</span>
         </a>
-        <a class="contact-link-item" href="https://bsky.app/profile/debsankarbanerjee.bsky.social" target="_blank">
-          <div class="link-icon">🦋</div>
-          <div class="link-text">
-            <span class="link-label">Bluesky</span>
-            <span class="link-value">debsankarbanerjee.bsky.social</span>
-          </div>
-          <span class="link-arrow">↗</span>
+        <a class="cl-item" href="https://bsky.app/profile/debsankarbanerjee.bsky.social" target="_blank">
+          <div class="cl-icon">🦋</div>
+          <div class="cl-text"><span class="cl-label">Bluesky</span><span class="cl-val">debsankarbanerjee.bsky.social</span></div>
+          <span class="cl-arrow">↗</span>
         </a>
       </div>
     </div>
   </div>
-
 </div>
 
 <footer>
-  <span>© 2024 Deb Sankar Banerjee · University of Chicago</span>
+  <span>© 2025 Deb Sankar Banerjee · Soft &amp; Living Adaptive Matter Lab</span>
   <span>
-    <a href="https://scholar.google.com/citations?user=jW_aHa8AAAAJ&hl=en" target="_blank">Google Scholar</a>
-    &nbsp;·&nbsp;
-    <a href="https://twitter.com/DebSBanerjee1" target="_blank">Twitter</a>
-    &nbsp;·&nbsp;
+    <a href="https://scholar.google.com/citations?user=jW_aHa8AAAAJ&hl=en" target="_blank">Google Scholar</a> ·
+    <a href="https://twitter.com/DebSBanerjee1" target="_blank">Twitter/X</a> ·
     <a href="https://orcid.org/0000-0003-4452-7982" target="_blank">ORCiD</a>
   </span>
 </footer>
-
 </body>
 </html>

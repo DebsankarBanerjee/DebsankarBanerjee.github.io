@@ -1,243 +1,330 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Publications · Deb Sankar Banerjee</title>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Publications · Banerjee Lab</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Crimson+Pro:ital,wght@0,300;0,400;1,300&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
   <style>
-    :root {
-      --ink: #0d1117; --deep: #111827; --surface: #1a2235; --card: #1e2d44;
-      --gold: #f0b429; --amber: #fbbf24; --cream: #f5f0e8;
-      --muted: #8a9bb5; --text: #d4dce8; --border: rgba(240,180,41,0.18);
-    }
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body {
-      font-family: 'Crimson Pro', Georgia, serif;
-      background: var(--ink); color: var(--text);
-      min-height: 100vh; font-size: 18px; line-height: 1.7;
-    }
-    nav {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 0 2.5rem; height: 64px;
-      background: rgba(13,17,23,0.92); backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--border);
-    }
-    .nav-logo {
-      font-family: 'Playfair Display', serif; font-size: 1.1rem;
-      color: var(--gold); letter-spacing: 0.03em; text-decoration: none;
-    }
-    .nav-links { display: flex; gap: 2rem; list-style: none; }
-    .nav-links a {
-      font-family: 'JetBrains Mono', monospace; font-size: 0.75rem;
-      letter-spacing: 0.12em; text-transform: uppercase;
-      color: var(--muted); text-decoration: none; transition: color 0.2s;
-    }
-    .nav-links a:hover, .nav-links a.active { color: var(--gold); }
-
-    .page-header {
-      padding: 140px 5vw 5rem; position: relative; overflow: hidden;
-      border-bottom: 1px solid var(--border);
-    }
-    .page-header::before {
-      content: ''; position: absolute; inset: 0;
-      background: radial-gradient(ellipse 50% 80% at 90% 50%, rgba(240,180,41,0.06) 0%, transparent 70%);
-      pointer-events: none;
-    }
-    .page-label {
-      font-family: 'JetBrains Mono', monospace; font-size: 0.7rem;
-      letter-spacing: 0.2em; text-transform: uppercase;
-      color: var(--gold); margin-bottom: 1rem;
-      display: flex; align-items: center; gap: 0.7rem;
-    }
-    .page-label::before { content: ''; display: inline-block; width: 28px; height: 1px; background: var(--gold); }
-    .page-title {
+    .pub-section { padding: 4rem 5vw; }
+    .year-group { margin-bottom: 3.5rem; }
+    .year-heading {
       font-family: 'Playfair Display', serif;
-      font-size: clamp(2.4rem, 5vw, 4rem);
-      color: var(--cream); line-height: 1.1; margin-bottom: 1.2rem;
-    }
-    .page-title em { font-style: italic; color: var(--gold); }
-    .header-actions {
-      display: flex; align-items: center; gap: 1.5rem; margin-top: 1.5rem; flex-wrap: wrap;
-    }
-    .btn {
-      font-family: 'JetBrains Mono', monospace; font-size: 0.72rem;
-      letter-spacing: 0.12em; text-transform: uppercase;
-      padding: 0.65rem 1.5rem; border-radius: 3px; text-decoration: none; transition: all 0.2s;
-    }
-    .btn-primary { background: var(--gold); color: var(--ink); border: none; }
-    .btn-primary:hover { background: var(--amber); transform: translateY(-1px); }
-    .btn-outline { background: transparent; color: var(--gold); border: 1px solid var(--gold); }
-    .btn-outline:hover { background: rgba(240,180,41,0.08); transform: translateY(-1px); }
-
-    /* PUBLICATIONS */
-    .pub-section { padding: 5rem 5vw; }
-    .section-heading {
-      font-family: 'Playfair Display', serif; font-size: 1.6rem;
-      color: var(--cream); margin-bottom: 2.5rem;
+      font-size: 1.5rem; color: var(--cream);
+      margin-bottom: 1.2rem; font-style: italic;
       display: flex; align-items: center; gap: 1rem;
     }
-    .section-heading::after {
-      content: ''; flex: 1; height: 1px;
-      background: linear-gradient(to right, var(--border), transparent);
-    }
+    .year-heading::after { content:''; flex:1; height:1px; background: linear-gradient(to right, var(--border), transparent); }
 
-    .pub-list { display: flex; flex-direction: column; gap: 1.2rem; }
-
+    .pub-list { display: flex; flex-direction: column; gap: 1rem; }
     .pub-item {
-      display: grid;
-      grid-template-columns: 3rem 1fr;
-      gap: 0 1.5rem;
-      padding: 1.8rem;
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 6px;
-      transition: border-color 0.25s, transform 0.2s;
+      display: grid; grid-template-columns: 2.5rem 1fr;
+      gap: 0 1.3rem; padding: 1.6rem 1.5rem;
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: 5px; transition: border-color 0.22s, transform 0.2s;
       position: relative; overflow: hidden;
     }
     .pub-item::before {
-      content: ''; position: absolute; top: 0; left: 0; bottom: 0; width: 3px;
-      background: var(--gold); opacity: 0; transition: opacity 0.25s;
+      content:''; position:absolute; top:0; left:0; bottom:0; width:3px;
+      background: var(--gold); opacity:0; transition: opacity 0.22s;
     }
-    .pub-item:hover { border-color: rgba(240,180,41,0.35); transform: translateX(3px); }
-    .pub-item:hover::before { opacity: 1; }
-
-    .pub-year {
-      font-family: 'JetBrains Mono', monospace; font-size: 0.65rem;
-      color: var(--gold); letter-spacing: 0.05em;
-      padding-top: 0.2rem; line-height: 1.4;
+    .pub-item:hover { border-color: rgba(240,180,41,0.38); transform: translateX(3px); }
+    .pub-item:hover::before { opacity:1; }
+    .pub-num {
+      font-family:'JetBrains Mono',monospace; font-size:0.65rem;
+      color: rgba(240,180,41,0.5); padding-top:0.2rem; text-align:right;
     }
-    .pub-content { display: flex; flex-direction: column; gap: 0.4rem; }
     .pub-title {
-      font-family: 'Playfair Display', serif; font-size: 1.1rem;
-      color: var(--cream); line-height: 1.35; font-weight: 400;
+      font-family:'Playfair Display',serif; font-size:1.05rem;
+      color:var(--cream); line-height:1.35; margin-bottom:0.35rem;
     }
-    .pub-authors { font-size: 0.9rem; color: var(--muted); font-style: italic; }
-    .pub-authors strong { color: var(--text); font-style: normal; }
+    .pub-authors { font-size:0.88rem; color:var(--muted); font-style:italic; margin-bottom:0.3rem; }
+    .pub-authors strong { color:var(--text); font-style:normal; font-weight:600; }
     .pub-journal {
-      font-family: 'JetBrains Mono', monospace; font-size: 0.7rem;
-      letter-spacing: 0.06em; color: var(--gold);
+      font-family:'JetBrains Mono',monospace; font-size:0.68rem;
+      letter-spacing:0.05em; color:var(--gold); margin-bottom:0.4rem;
     }
-    .pub-badges { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 0.4rem; }
+    .badges { display:flex; gap:0.4rem; flex-wrap:wrap; }
     .badge {
-      font-family: 'JetBrains Mono', monospace; font-size: 0.6rem;
-      letter-spacing: 0.08em; text-transform: uppercase;
-      padding: 0.2rem 0.6rem; border-radius: 2px;
+      font-family:'JetBrains Mono',monospace; font-size:0.58rem;
+      letter-spacing:0.08em; text-transform:uppercase;
+      padding:0.2rem 0.55rem; border-radius:2px;
     }
-    .badge-key { background: rgba(240,180,41,0.15); color: var(--gold); border: 1px solid rgba(240,180,41,0.3); }
-    .badge-review { background: rgba(96,165,250,0.1); color: #93c5fd; border: 1px solid rgba(96,165,250,0.25); }
+    .b-key { background:rgba(240,180,41,0.12); color:var(--gold); border:1px solid rgba(240,180,41,0.3); }
+    .b-review { background:rgba(96,165,250,0.1); color:#93c5fd; border:1px solid rgba(96,165,250,0.25); }
+    .b-prep { background:rgba(138,155,181,0.1); color:var(--muted); border:1px solid rgba(138,155,181,0.25); }
+    .b-equal { background:rgba(52,211,153,0.1); color:#6ee7b7; border:1px solid rgba(52,211,153,0.25); }
     .pub-link {
-      font-family: 'JetBrains Mono', monospace; font-size: 0.65rem;
-      letter-spacing: 0.08em; color: var(--gold); text-decoration: none;
-      margin-top: 0.4rem; display: inline-block;
+      font-family:'JetBrains Mono',monospace; font-size:0.62rem;
+      letter-spacing:0.08em; color:var(--gold); text-decoration:none; display:inline-block; margin-top:0.35rem;
     }
-    .pub-link:hover { text-decoration: underline; }
+    .pub-link:hover { text-decoration:underline; }
 
-    footer {
-      padding: 2.5rem 5vw;
-      display: flex; align-items: center; justify-content: space-between;
-      font-family: 'JetBrains Mono', monospace; font-size: 0.7rem;
-      color: var(--muted); letter-spacing: 0.08em; flex-wrap: wrap; gap: 1rem;
-      border-top: 1px solid var(--border);
-    }
-    footer a { color: var(--muted); text-decoration: none; }
-    footer a:hover { color: var(--gold); }
+    .header-actions { display:flex; gap:1rem; flex-wrap:wrap; margin-top:1.5rem; }
 
-    @media (max-width: 600px) {
-      .pub-item { grid-template-columns: 1fr; }
-      .pub-year { margin-bottom: 0.5rem; }
+    @media (max-width:600px) {
+      .pub-item { grid-template-columns:1fr; }
+      .pub-num { text-align:left; margin-bottom:0.3rem; }
     }
   </style>
 </head>
 <body>
-
 <nav>
-  <a class="nav-logo" href="index.html">DSB</a>
+  <a class="nav-logo" href="index.html">Deb Sankar Banerjee<span>Soft & Living Adaptive Matter Lab</span></a>
   <ul class="nav-links">
     <li><a href="index.html">Home</a></li>
     <li><a href="research.html">Research</a></li>
     <li><a href="publications.html" class="active">Publications</a></li>
+    <li><a href="people.html">People</a></li>
+    <li><a href="news.html">News</a></li>
     <li><a href="contact.html">Contact</a></li>
   </ul>
 </nav>
 
 <header class="page-header">
   <div class="page-label">Publications</div>
-  <h1 class="page-title">Selected<br><em>Works</em></h1>
+  <h1 class="page-title">Research<br><em>Output</em></h1>
+  <p class="page-intro">14 publications · 2 preprints under review · 4 manuscripts in preparation</p>
   <div class="header-actions">
-    <a class="btn btn-primary" href="https://scholar.google.com/citations?user=jW_aHa8AAAAJ&hl=en" target="_blank">Full List on Google Scholar</a>
+    <a class="btn btn-primary" href="https://scholar.google.com/citations?user=jW_aHa8AAAAJ&hl=en" target="_blank">Google Scholar</a>
     <a class="btn btn-outline" href="https://orcid.org/0000-0003-4452-7982" target="_blank">ORCiD Profile</a>
   </div>
 </header>
 
 <section class="pub-section">
-  <h2 class="section-heading">Key Publications</h2>
 
-  <div class="pub-list">
+  <div class="year-group">
+    <h2 class="year-heading">2025</h2>
+    <div class="pub-list">
 
-    <article class="pub-item">
-      <div class="pub-year">2017</div>
-      <div class="pub-content">
-        <div class="pub-title">Actomyosin pulsation and flows in an active elastomer with turnover and network remodelling</div>
-        <div class="pub-authors"><strong>Deb S Banerjee</strong>, Akankshi Munjal, Thomas Lecuit, Madan Rao</div>
-        <div class="pub-journal">Nature Communications 8, 1121</div>
-        <div class="pub-badges"><span class="badge badge-key">Key Publication</span></div>
-        <a class="pub-link" href="https://www.nature.com/articles/s41467-017-01130-1" target="_blank">nature.com →</a>
-      </div>
-    </article>
-
-    <article class="pub-item">
-      <div class="pub-year">2022</div>
-      <div class="pub-content">
-        <div class="pub-title">Size regulation of multiple organelles competing for a limiting subunit pool</div>
-        <div class="pub-authors"><strong>Deb S Banerjee</strong>, Shiladitya Banerjee</div>
-        <div class="pub-journal">PLoS Computational Biology 18 (6)</div>
-        <div class="pub-badges"><span class="badge badge-key">Key Publication</span></div>
-        <a class="pub-link" href="https://doi.org/10.1371/journal.pcbi.1010253" target="_blank">plos.org →</a>
-      </div>
-    </article>
-
-    <article class="pub-item">
-      <div class="pub-year">2023</div>
-      <div class="pub-content">
-        <div class="pub-title">Catalytic growth in a shared enzyme pool ensures robust control of centrosome size</div>
-        <div class="pub-authors"><strong>Deb S Banerjee</strong>, Shiladitya Banerjee</div>
-        <div class="pub-journal">eLife 12 (RP92203)</div>
-        <div class="pub-badges"><span class="badge badge-key">Key Publication</span></div>
-        <a class="pub-link" href="https://elifesciences.org/reviewed-preprints/92203" target="_blank">elifesciences.org →</a>
-      </div>
-    </article>
-
-    <article class="pub-item">
-      <div class="pub-year">2023</div>
-      <div class="pub-content">
-        <div class="pub-title">Interplay of condensate material properties and chromatin heterogeneity governs nuclear condensate ripening</div>
-        <div class="pub-authors"><strong>Deb S Banerjee</strong>, Tafadzwa Chigumira, Rachel M Lackner, Josiah C Kratz, David M Chenoweth, Shiladitya Banerjee, Huaiying Zhang</div>
-        <div class="pub-journal">In Review</div>
-        <div class="pub-badges">
-          <span class="badge badge-key">Key Publication</span>
-          <span class="badge badge-review">Under Review</span>
+      <article class="pub-item">
+        <div class="pub-num">12</div>
+        <div>
+          <div class="pub-title">Learning via mechanosensitivity and activity in cytoskeletal networks</div>
+          <div class="pub-authors"><strong>Deb S Banerjee</strong>, Martin J Falk, Margaret L Gardel, Aleksandra M Walczak, Thierry Mora, Suriyanarayanan Vaikuntanathan</div>
+          <div class="pub-journal">PRX Life (2025)</div>
+          <div class="badges"><span class="badge b-key">Key Publication</span></div>
+          <a class="pub-link" href="https://arxiv.org/abs/2504.15107" target="_blank">arXiv →</a>
         </div>
-        <a class="pub-link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11100695/" target="_blank">ncbi.nlm.nih.gov →</a>
-      </div>
-    </article>
+      </article>
 
+      <article class="pub-item">
+        <div class="pub-num">13</div>
+        <div>
+          <div class="pub-title">Excitability and travelling waves in renewable active matter</div>
+          <div class="pub-authors">Abhishek M, Ankit Dhanuka, <strong>Deb S Banerjee</strong>, Madan Rao</div>
+          <div class="pub-journal">Physical Review E 112, 045433 (2025)</div>
+          <div class="badges"></div>
+          <a class="pub-link" href="#" target="_blank">Journal →</a>
+        </div>
+      </article>
+
+      <article class="pub-item">
+        <div class="pub-num">11</div>
+        <div>
+          <div class="pub-title">Design principles of organelle size control: from single to multi-organelle systems</div>
+          <div class="pub-authors"><strong>Deb S Banerjee</strong>, Shiladitya Banerjee</div>
+          <div class="pub-journal">Current Opinion in Cell Biology 95: 102533 (2025)</div>
+          <div class="badges"><span class="badge b-key">Review</span></div>
+        </div>
+      </article>
+
+    </div>
   </div>
+
+  <div class="year-group">
+    <h2 class="year-heading">2024</h2>
+    <div class="pub-list">
+
+      <article class="pub-item">
+        <div class="pub-num">10</div>
+        <div>
+          <div class="pub-title">Interplay of condensate material properties and chromatin heterogeneity governs nuclear condensate ripening</div>
+          <div class="pub-authors"><strong>Deb S Banerjee</strong>, Tafadzwa Chigumira, Rachel M Lackner, Josiah C Kratz, David M Chenoweth, Shiladitya Banerjee, Huaiying Zhang</div>
+          <div class="pub-journal">eLife 13: RP101777 (2024)</div>
+          <div class="badges"><span class="badge b-key">Key Publication</span></div>
+          <a class="pub-link" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11100695/" target="_blank">PMC →</a>
+        </div>
+      </article>
+
+      <article class="pub-item">
+        <div class="pub-num">9</div>
+        <div>
+          <div class="pub-title">Growth-induced collective bending and kinetic trapping of cytoskeletal filaments</div>
+          <div class="pub-authors"><strong>Deb S Banerjee</strong>, Simon L Freedman, Michael P Murrell, Shiladitya Banerjee</div>
+          <div class="pub-journal">Cytoskeleton 81 (8), 409–419 (2024)</div>
+          <div class="badges"></div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+
+  <div class="year-group">
+    <h2 class="year-heading">2023</h2>
+    <div class="pub-list">
+
+      <article class="pub-item">
+        <div class="pub-num">8</div>
+        <div>
+          <div class="pub-title">Catalytic growth in a shared enzyme pool ensures robust control of centrosome size</div>
+          <div class="pub-authors"><strong>Deb S Banerjee</strong>, Shiladitya Banerjee</div>
+          <div class="pub-journal">eLife 12: RP92203 (2023)</div>
+          <div class="badges"><span class="badge b-key">Key Publication</span></div>
+          <a class="pub-link" href="https://elifesciences.org/reviewed-preprints/92203" target="_blank">eLife →</a>
+        </div>
+      </article>
+
+      <article class="pub-item">
+        <div class="pub-num">7</div>
+        <div>
+          <div class="pub-title">Membrane Tension Induces F-actin Reorganization and Flow in a Biomimetic Model Cortex</div>
+          <div class="pub-authors">R Sakamoto, <strong>Deb S Banerjee</strong>, V Yadav, S Chen, M Gardel, C Sykes, S Banerjee, MP Murrell</div>
+          <div class="pub-journal">Communications Biology 6, 325 (2023)</div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+
+  <div class="year-group">
+    <h2 class="year-heading">2022</h2>
+    <div class="pub-list">
+
+      <article class="pub-item">
+        <div class="pub-num">6</div>
+        <div>
+          <div class="pub-title">Active ploughing through a compressible viscoelastic fluid: Unjamming and emergent non-reciprocity</div>
+          <div class="pub-authors">Jyoti P Banerjee, Rituparno Mandal, <strong>Deb S Banerjee</strong>, Shashi Thutupalli, Madan Rao</div>
+          <div class="pub-journal">Nature Communications 13, 4533 (2022)</div>
+        </div>
+      </article>
+
+      <article class="pub-item">
+        <div class="pub-num">5</div>
+        <div>
+          <div class="pub-title">Emergence and maintenance of variable-length actin filaments in a limiting pool of building blocks</div>
+          <div class="pub-authors"><strong>Deb S Banerjee</strong>, Shiladitya Banerjee</div>
+          <div class="pub-journal">Biophysical Journal 121 (12) (2022)</div>
+        </div>
+      </article>
+
+      <article class="pub-item">
+        <div class="pub-num">4</div>
+        <div>
+          <div class="pub-title">Size regulation of multiple organelles competing for a limiting subunit pool</div>
+          <div class="pub-authors"><strong>Deb S Banerjee</strong>, Shiladitya Banerjee</div>
+          <div class="pub-journal">PLoS Computational Biology 18 (6) (2022)</div>
+          <div class="badges"><span class="badge b-key">Key Publication</span></div>
+          <a class="pub-link" href="https://doi.org/10.1371/journal.pcbi.1010253" target="_blank">PLoS →</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+
+  <div class="year-group">
+    <h2 class="year-heading">2017–2020</h2>
+    <div class="pub-list">
+
+      <article class="pub-item">
+        <div class="pub-num">3</div>
+        <div>
+          <div class="pub-title">Size-regulated symmetry breaking in reaction-diffusion models of developmental transitions</div>
+          <div class="pub-authors">Jake C Scoones, <strong>Deb S Banerjee*</strong>, Shiladitya Banerjee</div>
+          <div class="pub-journal">Cells 9 (7), 1646 (2020)</div>
+          <div class="badges"><span class="badge b-equal">* Equal contribution</span></div>
+          <a class="pub-link" href="https://www.mdpi.com/2073-4409/9/7/1646" target="_blank">MDPI →</a>
+        </div>
+      </article>
+
+      <article class="pub-item">
+        <div class="pub-num">2</div>
+        <div>
+          <div class="pub-title">Filament Nucleation Tunes Mechanical Memory in Active Polymer Networks</div>
+          <div class="pub-authors">Vikrant Yadav, <strong>Deb S Banerjee</strong>, A Pasha Tabatabai, David R Kovar, Taeyoon Kim, Shiladitya Banerjee, Michael P Murrell</div>
+          <div class="pub-journal">Advanced Functional Materials 29 (49), 1905243 (2019)</div>
+        </div>
+      </article>
+
+      <article class="pub-item">
+        <div class="pub-num">1</div>
+        <div>
+          <div class="pub-title">Actomyosin pulsation and flows in an active elastomer with turnover and network remodelling</div>
+          <div class="pub-authors"><strong>Deb S Banerjee</strong>, Akankshi Munjal, Thomas Lecuit, Madan Rao</div>
+          <div class="pub-journal">Nature Communications 8, 1121 (2017)</div>
+          <div class="badges"><span class="badge b-key">Key Publication</span></div>
+          <a class="pub-link" href="https://www.nature.com/articles/s41467-017-01130-1" target="_blank">Nature →</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+
+  <!-- PREPRINTS / IN REVIEW -->
+  <div class="year-group">
+    <h2 class="year-heading">Under Review</h2>
+    <div class="pub-list">
+      <article class="pub-item">
+        <div class="pub-num">—</div>
+        <div>
+          <div class="pub-title">Contractile to extensile transitions and mechanical adaptability enabled by activity in cytoskeletal structures</div>
+          <div class="pub-authors">Alexandra Lamtyugina, <strong>Deb S Banerjee*</strong>, Yuqing Qiu, Suriyanarayanan Vaikuntanathan</div>
+          <div class="pub-journal">Under review · PNAS</div>
+          <div class="badges"><span class="badge b-review">Under Review</span><span class="badge b-equal">* Equal contribution</span></div>
+        </div>
+      </article>
+    </div>
+  </div>
+
+  <!-- IN PREPARATION -->
+  <div class="year-group">
+    <h2 class="year-heading">In Preparation</h2>
+    <div class="pub-list">
+      <article class="pub-item">
+        <div class="pub-num">—</div>
+        <div>
+          <div class="pub-title">Medial and Junctional Myosin work in tandem to ratchet junctional shrinkage</div>
+          <div class="pub-authors"><strong>Deb S Banerjee</strong>, Kabir Husain, Girish Kale, Thomas Lecuit, Madan Rao</div>
+          <div class="badges"><span class="badge b-prep">In Preparation</span></div>
+        </div>
+      </article>
+      <article class="pub-item">
+        <div class="pub-num">—</div>
+        <div>
+          <div class="pub-title">Growth induced nematic defects and force patterning in actin filament networks</div>
+          <div class="pub-authors"><strong>Deb S Banerjee</strong>, Xinzhi Li, Shiladitya Banerjee</div>
+          <div class="badges"><span class="badge b-prep">In Preparation</span></div>
+        </div>
+      </article>
+      <article class="pub-item">
+        <div class="pub-num">—</div>
+        <div>
+          <div class="pub-title">Physical learning in tissue morphogenesis</div>
+          <div class="pub-authors"><strong>Deb S Banerjee</strong>, Martin J Falk, Margaret L Gardel, Aleksandra Walczak, Thierry Mora, Suriyanarayanan Vaikuntanathan</div>
+          <div class="badges"><span class="badge b-prep">In Preparation</span></div>
+        </div>
+      </article>
+      <article class="pub-item">
+        <div class="pub-num">—</div>
+        <div>
+          <div class="pub-title">Role of resource limitation in learning in recurrent neural networks</div>
+          <div class="pub-authors"><strong>Deb S Banerjee</strong>, Agnish Behera, Rituparno Mandal, Suriyanarayanan Vaikuntanathan</div>
+          <div class="badges"><span class="badge b-prep">In Preparation</span></div>
+        </div>
+      </article>
+    </div>
+  </div>
+
 </section>
 
 <footer>
-  <span>© 2024 Deb Sankar Banerjee · University of Chicago</span>
+  <span>© 2025 Deb Sankar Banerjee · Soft &amp; Living Adaptive Matter Lab</span>
   <span>
-    <a href="https://scholar.google.com/citations?user=jW_aHa8AAAAJ&hl=en" target="_blank">Google Scholar</a>
-    &nbsp;·&nbsp;
-    <a href="https://twitter.com/DebSBanerjee1" target="_blank">Twitter</a>
-    &nbsp;·&nbsp;
+    <a href="https://scholar.google.com/citations?user=jW_aHa8AAAAJ&hl=en" target="_blank">Google Scholar</a> ·
     <a href="https://orcid.org/0000-0003-4452-7982" target="_blank">ORCiD</a>
   </span>
 </footer>
-
 </body>
 </html>

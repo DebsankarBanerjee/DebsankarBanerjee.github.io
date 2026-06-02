@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>News · Banerjee Lab</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Crimson+Pro:ital,wght@0,300;0,400;1,300&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .news-layout { display: grid; grid-template-columns: 1fr 320px; gap: 4rem; padding: 4.5rem 5vw; align-items: start; }
+
+    /* NEWS FEED */
+    .news-list { display: flex; flex-direction: column; gap: 1.2rem; }
+    .news-item {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: 6px; padding: 1.8rem;
+      display: grid; grid-template-columns: 80px 1fr;
+      gap: 0 1.5rem; position: relative; overflow: hidden;
+      transition: border-color 0.22s, transform 0.2s;
+    }
+    .news-item:hover { border-color: rgba(240,180,41,0.35); transform: translateX(3px); }
+    .news-item::before {
+      content:''; position:absolute; top:0; left:0; bottom:0; width:3px;
+      opacity:0; transition: opacity 0.22s;
+    }
+    .news-item:hover::before { opacity:1; }
+    .news-item.type-position::before { background: var(--gold); }
+    .news-item.type-paper::before { background: #60a5fa; }
+    .news-item.type-talk::before { background: #a78bfa; }
+    .news-item.type-award::before { background: var(--green); }
+    .news-item.type-recruit::before { background: var(--green); }
+
+    .news-date {
+      font-family: 'JetBrains Mono', monospace; font-size: 0.62rem;
+      letter-spacing: 0.08em; color: var(--muted); line-height: 1.4;
+      padding-top: 0.15rem; text-align: right;
+    }
+    .news-type-badge {
+      font-family: 'JetBrains Mono', monospace; font-size: 0.55rem;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      padding: 0.15rem 0.45rem; border-radius: 2px; display: inline-block;
+      margin-bottom: 0.4rem;
+    }
+    .badge-position { background: rgba(240,180,41,0.12); color: var(--gold); border: 1px solid rgba(240,180,41,0.3); }
+    .badge-paper { background: rgba(96,165,250,0.1); color: #93c5fd; border: 1px solid rgba(96,165,250,0.25); }
+    .badge-talk { background: rgba(167,139,250,0.1); color: #c4b5fd; border: 1px solid rgba(167,139,250,0.25); }
+    .badge-recruit { background: rgba(52,211,153,0.1); color: #6ee7b7; border: 1px solid rgba(52,211,153,0.25); }
+
+    .news-title {
+      font-family: 'Playfair Display', serif; font-size: 1.05rem;
+      color: var(--cream); margin-bottom: 0.4rem; line-height: 1.35;
+    }
+    .news-body { font-size: 0.92rem; color: var(--muted); line-height: 1.65; }
+    .news-body a { color: var(--gold); text-decoration: none; }
+    .news-body a:hover { text-decoration: underline; }
+
+    /* SIDEBAR */
+    .sidebar { display: flex; flex-direction: column; gap: 1.5rem; position: sticky; top: 84px; }
+    .sidebar-card {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: 6px; padding: 1.5rem;
+    }
+    .sidebar-title {
+      font-family: 'JetBrains Mono', monospace; font-size: 0.65rem;
+      letter-spacing: 0.15em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 1rem;
+      border-bottom: 1px solid var(--border); padding-bottom: 0.5rem;
+    }
+
+    /* JOIN US SIDEBAR */
+    .join-card {
+      background: var(--card); border: 1px solid rgba(52,211,153,0.25);
+      border-radius: 6px; padding: 1.5rem;
+    }
+    .join-card .sidebar-title { color: var(--green); border-bottom-color: rgba(52,211,153,0.2); }
+    .join-card p { font-size: 0.9rem; color: var(--text); line-height: 1.65; margin-bottom: 1rem; }
+    .join-card ul { list-style: none; margin-bottom: 1.2rem; }
+    .join-card ul li {
+      font-size: 0.87rem; color: var(--muted); line-height: 1.65;
+      padding-left: 1.2rem; position: relative;
+    }
+    .join-card ul li::before { content:'→'; position:absolute; left:0; color:var(--green); font-size:0.72rem; }
+
+    .talks-list { display: flex; flex-direction: column; gap: 0.8rem; }
+    .talk-item { border-left: 2px solid var(--border); padding-left: 0.9rem; }
+    .talk-event { font-size: 0.88rem; color: var(--text); line-height: 1.4; margin-bottom: 0.1rem; }
+    .talk-detail { font-family: 'JetBrains Mono', monospace; font-size: 0.6rem; letter-spacing: 0.07em; color: var(--muted); }
+
+    @media (max-width: 900px) {
+      .news-layout { grid-template-columns: 1fr; }
+      .sidebar { position: static; }
+      .news-item { grid-template-columns: 1fr; }
+      .news-date { text-align: left; margin-bottom: 0.4rem; }
+    }
+  </style>
+</head>
+<body>
+<nav>
+  <a class="nav-logo" href="index.html">Deb Sankar Banerjee<span>Soft & Living Adaptive Matter Lab</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="research.html">Research</a></li>
+    <li><a href="publications.html">Publications</a></li>
+    <li><a href="people.html">People</a></li>
+    <li><a href="news.html" class="active">News</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<header class="page-header">
+  <div class="page-label">News</div>
+  <h1 class="page-title">Lab<br><em>Updates</em></h1>
+  <p class="page-intro">Latest news, papers, talks, and opportunities from the Soft &amp; Living Adaptive Matter Lab.</p>
+</header>
+
+<div class="news-layout">
+
+  <!-- MAIN FEED -->
+  <div>
+    <div class="label" style="margin-bottom:1.2rem;">2025</div>
+    <div class="news-list">
+
+      <div class="news-item type-position">
+        <div class="news-date">2025<br>Coming<br>Soon</div>
+        <div>
+          <span class="news-type-badge badge-position">New Position</span>
+          <div class="news-title">🎉 Joining as Assistant Professor</div>
+          <p class="news-body">Excited to announce that I will be starting as an Assistant Professor soon. More details on the institution and start date will be shared shortly. The Soft &amp; Living Adaptive Matter Lab is being established — stay tuned!</p>
+        </div>
+      </div>
+
+      <div class="news-item type-paper">
+        <div class="news-date">2025<br>May</div>
+        <div>
+          <span class="news-type-badge badge-paper">New Paper</span>
+          <div class="news-title">Physical learning in cytoskeletal networks — PRX Life</div>
+          <p class="news-body">"Learning via mechanosensitivity and activity in cytoskeletal networks" accepted in <em>PRX Life</em>. We show how mechanochemical feedback enables networks to learn without neurons. <a href="https://arxiv.org/abs/2504.15107" target="_blank">arXiv preprint →</a></p>
+        </div>
+      </div>
+
+      <div class="news-item type-paper">
+        <div class="news-date">2025<br>Mar</div>
+        <div>
+          <span class="news-type-badge badge-paper">New Paper</span>
+          <div class="news-title">Excitability and travelling waves in renewable active matter — PRE</div>
+          <p class="news-body">"Excitability and travelling waves in renewable active matter" published in <em>Physical Review E</em>. Work with Abhishek M, Ankit Dhanuka, and Madan Rao.</p>
+        </div>
+      </div>
+
+      <div class="news-item type-paper">
+        <div class="news-date">2025<br>Jan</div>
+        <div>
+          <span class="news-type-badge badge-paper">Review Article</span>
+          <div class="news-title">Design principles of organelle size control — Current Opinion in Cell Biology</div>
+          <p class="news-body">Review article on organelle size control — from single to multi-organelle systems — published in <em>Current Opinion in Cell Biology</em>.</p>
+        </div>
+      </div>
+
+      <div class="news-item type-talk">
+        <div class="news-date">2025<br>Jan</div>
+        <div>
+          <span class="news-type-badge badge-talk">Talk</span>
+          <div class="news-title">Biophysical Society, UChicago Student Chapter</div>
+          <p class="news-body">Contributed talk at the Biophysical Society University of Chicago Student Chapter.</p>
+        </div>
+      </div>
+
+      <div class="news-item type-paper">
+        <div class="news-date">2024<br>Oct</div>
+        <div>
+          <span class="news-type-badge badge-paper">New Paper</span>
+          <div class="news-title">Nuclear condensate ripening — eLife</div>
+          <p class="news-body">"Interplay of condensate material properties and chromatin heterogeneity governs nuclear condensate ripening" published in <em>eLife</em>. Work with Chigumira, Lackner, Zhang et al.</p>
+        </div>
+      </div>
+
+      <div class="news-item type-talk">
+        <div class="news-date">2025<br>Jan</div>
+        <div>
+          <span class="news-type-badge badge-talk">Conference</span>
+          <div class="news-title">Biological Systems that Learn · NITMB, Chicago</div>
+          <p class="news-body">Poster presentation at the "Biological Systems that Learn" conference at the National Institute for Theory and Mathematics in Biology, Chicago.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+
+    <div class="join-card" id="join">
+      <div class="sidebar-title">We Are Recruiting</div>
+      <p>The Soft &amp; Living Adaptive Matter Lab is actively looking for new members at all levels.</p>
+      <ul>
+        <li>PhD Students</li>
+        <li>Postdoctoral Researchers</li>
+        <li>Master's &amp; Undergraduate Students</li>
+      </ul>
+      <a class="btn btn-outline" href="people.html" style="width:100%; text-align:center; display:block; font-size:0.65rem;">View Openings →</a>
+      <p style="margin-top:0.9rem; font-size:0.82rem;">Email <a href="mailto:dsbanerjee@uchicago.edu">dsbanerjee@uchicago.edu</a> with CV and brief statement of interest.</p>
+    </div>
+
+    <div class="sidebar-card">
+      <div class="sidebar-title">Recent Talks</div>
+      <div class="talks-list">
+        <div class="talk-item">
+          <div class="talk-event">Biophysical Society, UChicago Student Chapter</div>
+          <div class="talk-detail">Chicago · 2025</div>
+        </div>
+        <div class="talk-item">
+          <div class="talk-event">Biological Systems that Learn · NITMB</div>
+          <div class="talk-detail">Chicago · 2025</div>
+        </div>
+        <div class="talk-item">
+          <div class="talk-event">APS March Meeting</div>
+          <div class="talk-detail">Las Vegas · 2023</div>
+        </div>
+        <div class="talk-item">
+          <div class="talk-event">Biophysical Society Annual Meeting</div>
+          <div class="talk-detail">San Francisco · 2022</div>
+        </div>
+        <div class="talk-item">
+          <div class="talk-event">APS March Meeting</div>
+          <div class="talk-detail">Chicago · 2022</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sidebar-card">
+      <div class="sidebar-title">Quick Links</div>
+      <div style="display:flex; flex-direction:column; gap:0.6rem;">
+        <a href="https://scholar.google.com/citations?user=jW_aHa8AAAAJ&hl=en" target="_blank" class="btn btn-ghost" style="font-size:0.65rem; text-align:center;">Google Scholar</a>
+        <a href="https://orcid.org/0000-0003-4452-7982" target="_blank" class="btn btn-ghost" style="font-size:0.65rem; text-align:center;">ORCiD Profile</a>
+        <a href="https://twitter.com/DebSBanerjee1" target="_blank" class="btn btn-ghost" style="font-size:0.65rem; text-align:center;">Twitter / X</a>
+        <a href="https://bsky.app/profile/debsankarbanerjee.bsky.social" target="_blank" class="btn btn-ghost" style="font-size:0.65rem; text-align:center;">Bluesky</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  <span>© 2025 Deb Sankar Banerjee · Soft &amp; Living Adaptive Matter Lab</span>
+  <span>
+    <a href="https://scholar.google.com/citations?user=jW_aHa8AAAAJ&hl=en" target="_blank">Google Scholar</a> ·
+    <a href="https://twitter.com/DebSBanerjee1" target="_blank">Twitter/X</a> ·
+    <a href="https://orcid.org/0000-0003-4452-7982" target="_blank">ORCiD</a>
+  </span>
+</footer>
+</body>
+</html>
